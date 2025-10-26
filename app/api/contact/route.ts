@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
       from: "X-Centered <noreply@xcentered.design>",
       to: ["YOUR_EMAIL@EXAMPLE.COM"],
       subject: `Contact: ${topic || "New message"}`,
-      reply_to: email,
+      replyTo: email,
       text: `From: ${name} <${email}>\nTopic: ${topic}\n\n${message}`,
     });
     return NextResponse.redirect(new URL("/?sent=1", req.url));
