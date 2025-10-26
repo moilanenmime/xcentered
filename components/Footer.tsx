@@ -11,6 +11,7 @@ export default function Footer() {
             <a href="https://www.researchgate.net/" target="_blank">
               ResearchGate
             </a>
+            <a href="/privacy">Privacy</a>
           </div>
         </div>
       </div>
