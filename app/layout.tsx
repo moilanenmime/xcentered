@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Flash from "@/components/Flash";
+import { Suspense } from "react";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className + " bg-neutral-950 text-neutral-100"}>
         <Nav />
-        <Flash /> {/* shows success/error after form submit */}
+        <Suspense fallback={null}>
+          {" "}
+          {/* ✅ wrap Flash in Suspense */}
+          <Flash />
+        </Suspense>
         {children}
         <Footer />
       </body>
