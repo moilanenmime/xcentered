@@ -7,8 +7,8 @@ export const dynamic = "force-dynamic"; // avoid static optimization of this rou
 
 const ORIGINS = new Set([
   "https://xcentered-design.vercel.app",
-  "https://xcentered.design",
   "http://localhost:3000",
+  //   "https://xcentered.design",
 ]);
 
 export async function POST(req: NextRequest) {
