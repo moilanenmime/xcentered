@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import Flash from "@/components/Flash";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,10 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className + " bg-neutral-950 text-neutral-100"}>
         <Nav />
+        <Flash /> {/* shows success/error after form submit */}
         {children}
         <Footer />
-        {/* Plausible (add your domain later) */}
-        {/* <script defer data-domain="xcentered.design" src="https://plausible.io/js/script.tagged-events.js"></script> */}
       </body>
     </html>
   );
