@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
   try {
     await resend.emails.send({
       from: "X-Centered <noreply@xcentered.design>",
-      to: ["YOUR_EMAIL@EXAMPLE.COM"],
+      to: [process.env.CONTACT_EMAIL || "moilanenmime@gmail.com"],
       subject: `Contact: ${topic || "New message"}`,
       replyTo: email,
       text: `From: ${name} <${email}>\nTopic: ${topic}\n\n${message}`,
