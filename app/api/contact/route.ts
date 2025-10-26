@@ -7,7 +7,7 @@ export const runtime = "nodejs"; // be explicit
 const resend = new Resend(process.env.RESEND_API_KEY);
 const ORIGINS = new Set([
   "https://xcentered-design.vercel.app",
-  "https://xcentered.design", // add when attached
+  //   "https://xcentered.design", // add when attached
   "http://localhost:3000",
 ]);
 
