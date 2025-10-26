@@ -30,7 +30,9 @@ export default function Home() {
           </a>
         </div>
       </section>
-      // ...keep your hero above
+
+      {/* // ...keep your hero above */}
+
       <section id="contact" className="mx-auto max-w-5xl px-6 py-24">
         <h2 className="text-2xl font-semibold">Contact</h2>
         <p className="mt-2 text-neutral-300">
