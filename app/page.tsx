@@ -30,6 +30,55 @@ export default function Home() {
           </a>
         </div>
       </section>
+      // ...keep your hero above
+      <section id="contact" className="mx-auto max-w-5xl px-6 py-24">
+        <h2 className="text-2xl font-semibold">Contact</h2>
+        <p className="mt-2 text-neutral-300">
+          Interested in collaboration, speaking, or research?
+        </p>
+        <form
+          className="mt-6 grid gap-3 max-w-xl"
+          method="post"
+          action="/api/contact"
+        >
+          <input
+            name="name"
+            placeholder="Your name"
+            className="rounded-md bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800"
+            required
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="Your email"
+            className="rounded-md bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800"
+            required
+          />
+          <input
+            name="topic"
+            placeholder="Topic"
+            className="rounded-md bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800"
+          />
+          <textarea
+            name="message"
+            placeholder="Your message"
+            rows={6}
+            className="rounded-md bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800"
+            required
+          />
+          {/* Honeypot anti-spam */}
+          <input
+            type="text"
+            name="company"
+            className="hidden"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+          <button className="mt-2 w-fit rounded-lg bg-emerald-500 px-6 py-3 font-medium text-neutral-950 hover:bg-emerald-400">
+            Send
+          </button>
+        </form>
+      </section>
     </main>
   );
 }
