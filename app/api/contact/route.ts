@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: "X-Centered <noreply@xcentered.design>",
+      from: "X-Centered <onboarding@resend.dev>",
       to: [process.env.CONTACT_EMAIL || "moilanenmime@gmail.com"],
       subject: `[X-Centered Contact] ${topic || "New message"}`,
       // SDKs differ: support both keys safely
