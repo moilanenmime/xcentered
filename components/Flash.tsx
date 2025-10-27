@@ -31,8 +31,8 @@ export default function Flash() {
     router.replace(url.pathname + url.search);
 
     // auto-hide after 5s
-    const t = setTimeout(() => setOpen(false), 5000);
-    return () => clearTimeout(t);
+    // const t = setTimeout(() => setOpen(false), 5000);
+    // return () => clearTimeout(t);
   }, [status, router]);
 
   if (!open || !message) return null;
