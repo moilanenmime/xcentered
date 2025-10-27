@@ -25,14 +25,20 @@ export default function Flash() {
     if (!status) return;
     setOpen(true);
 
-    // remove ?sent=... from the URL to avoid re-triggering on refresh
-    const url = new URL(window.location.href);
-    url.searchParams.delete("sent");
-    router.replace(url.pathname + url.search);
+    // Delay the URL cleanup to avoid immediate re-render
+    const urlCleanup = setTimeout(() => {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("sent");
+      router.replace(url.pathname + url.search);
+    }, 100);
 
-    // auto-hide after 5s
-    // const t = setTimeout(() => setOpen(false), 5000);
-    // return () => clearTimeout(t);
+    // Auto-hide after 10 seconds
+    const hideTimeout = setTimeout(() => setOpen(false), 10000);
+
+    return () => {
+      clearTimeout(urlCleanup);
+      clearTimeout(hideTimeout);
+    };
   }, [status, router]);
 
   if (!open || !message) return null;
