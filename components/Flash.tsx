@@ -26,12 +26,20 @@ export default function Flash() {
     console.log("Flash: Setting open to true, status:", status);
     setOpen(true);
 
+    // Clean up URL after notification is shown
+    const urlCleanup = setTimeout(() => {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("sent");
+      router.replace(url.pathname + url.search);
+    }, 5000); // Clean URL after 5 seconds
+
     const hideTimeout = setTimeout(() => {
       console.log("Flash: Auto-hiding after timeout");
       setOpen(false);
-    }, 15000);
+    }, 8000);
 
     return () => {
+      clearTimeout(urlCleanup);
       clearTimeout(hideTimeout);
     };
   }, [status, router]);
