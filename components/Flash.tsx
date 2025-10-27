@@ -23,23 +23,20 @@ export default function Flash() {
   // Show on load if present
   useEffect(() => {
     if (!status) return;
+    console.log("Flash: Setting open to true, status:", status);
     setOpen(true);
 
-    // Delay the URL cleanup to avoid immediate re-render
-    const urlCleanup = setTimeout(() => {
-      const url = new URL(window.location.href);
-      url.searchParams.delete("sent");
-      router.replace(url.pathname + url.search);
-    }, 100);
-
-    // Auto-hide after 10 seconds
-    const hideTimeout = setTimeout(() => setOpen(false), 10000);
+    const hideTimeout = setTimeout(() => {
+      console.log("Flash: Auto-hiding after timeout");
+      setOpen(false);
+    }, 15000);
 
     return () => {
-      clearTimeout(urlCleanup);
       clearTimeout(hideTimeout);
     };
   }, [status, router]);
+
+  console.log("Flash render: open =", open, "message =", message);
 
   if (!open || !message) return null;
 
