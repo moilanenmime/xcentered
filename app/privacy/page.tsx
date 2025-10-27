@@ -21,8 +21,8 @@ export default function PrivacyPage() {
             account is created.
           </li>
           <li>
-            <strong>Basic analytics (optional):</strong> anonymous page views
-            and referrers (no cookies) if enabled.
+            <strong>Basic analytics:</strong> anonymous page views and referrers
+            (no cookies).
           </li>
         </ul>
 
@@ -68,7 +68,7 @@ export default function PrivacyPage() {
         <ul>
           <li>Vercel (hosting & edge network)</li>
           <li>Resend (transactional email)</li>
-          <li>Plausible (privacy-first analytics, if enabled)</li>
+          <li>Plausible (privacy-first analytics)</li>
         </ul>
 
         <p className="text-neutral-400">
