@@ -123,8 +123,9 @@ export default function XsPage() {
             Xs — Dimensions
           </h1>
           <p className="mt-3 text-neutral-300">
-            Dimensions you can tag to each post — a semantic map of meaning,
-            practice, relations, and world.
+            Xs are the dimensions guiding our consciousness to spot what we
+            circle and value. Xs are divided into categories as a semantic map
+            of meaning, practice, relations, and world.
           </p>
         </div>
 
