@@ -23,17 +23,18 @@ const XS: X[] = [
     ring: "core",
   },
   {
-    name: "Flow",
-    slug: "flow",
-    blurb: "Harmony of challenge, skill, and presence in action.",
+    name: "Darkside",
+    slug: "darkside",
+    blurb: "Shadows of design — addiction, manipulation, unintended harm.",
     ring: "core",
   },
   {
-    name: "Ethics",
-    slug: "ethics",
-    blurb: "The moral compass guiding responsible design and technology.",
+    name: "Spiritual",
+    slug: "spiritual",
+    blurb: "Transcendence, presence, and the inner search for balance.",
     ring: "core",
   },
+
   // practice
   {
     name: "Design",
@@ -45,6 +46,24 @@ const XS: X[] = [
     name: "Evaluation",
     slug: "evaluation",
     blurb: "Assessment and reflection — understanding merit and worth.",
+    ring: "practice",
+  },
+  {
+    name: "Value",
+    slug: "value",
+    blurb: "Determining importance and prioritization in design choices.",
+    ring: "practice",
+  },
+  {
+    name: "Flow",
+    slug: "flow",
+    blurb: "Harmony of challenge, skill, and presence in action.",
+    ring: "practice",
+  },
+  {
+    name: "Ethics",
+    slug: "ethics",
+    blurb: "The moral compass guiding responsible design and technology.",
     ring: "practice",
   },
   // who
@@ -89,18 +108,6 @@ const XS: X[] = [
     name: "Technology",
     slug: "technology",
     blurb: "The evolving medium through which we extend ourselves.",
-    ring: "world",
-  },
-  {
-    name: "Darkside",
-    slug: "darkside",
-    blurb: "Shadows of design — addiction, manipulation, unintended harm.",
-    ring: "world",
-  },
-  {
-    name: "Spiritual",
-    slug: "spiritual",
-    blurb: "Transcendence, presence, and the inner search for balance.",
     ring: "world",
   },
 ];
