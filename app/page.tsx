@@ -30,7 +30,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* // ...keep your hero above */}
+      {/* // ...keeping the hero above */}
 
       <section id="contact" className="mx-auto max-w-5xl px-6 py-24">
         <h2 className="text-2xl font-semibold">Contact</h2>
