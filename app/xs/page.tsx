@@ -174,7 +174,8 @@ export default function XsPage() {
             Xs — Dimensions
           </h1>
           <p className="mt-3 text-neutral-300">
-            Click any dimension to see its definition or filter posts.
+            A research blog combining academic and reflective writings across
+            dimensions identified as Xs.
           </p>
         </div>
 
