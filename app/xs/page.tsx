@@ -173,7 +173,8 @@ export default function XsPage() {
           <h1 className="text-4xl font-semibold tracking-tight">Xs</h1>
           <p className="mt-3 text-neutral-300">
             A research blog combining academic and reflective writings across
-            dimensions identified as Xs.
+            dimensions identified as Xs. Each X represents a unique lens through
+            which we explore the world and design.
           </p>
         </div>
 
