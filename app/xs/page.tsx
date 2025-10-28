@@ -1,4 +1,6 @@
-// app/xs/page.tsx
+"use client";
+import { useMemo, useState } from "react";
+
 type X = {
   name: string;
   slug: string;
@@ -6,9 +8,7 @@ type X = {
   ring: "core" | "practice" | "who" | "world";
 };
 
-// master list (you can tweak blurbs anytime)
 const XS: X[] = [
-  // core (why)
   {
     name: "Existence",
     slug: "existence",
@@ -33,8 +33,6 @@ const XS: X[] = [
     blurb: "The moral compass guiding responsible design and technology.",
     ring: "core",
   },
-
-  // practice (how)
   {
     name: "Design",
     slug: "design",
@@ -47,8 +45,6 @@ const XS: X[] = [
     blurb: "Assessment and reflection — understanding merit and worth.",
     ring: "practice",
   },
-
-  // who (roles/relations)
   {
     name: "Human",
     slug: "human",
@@ -67,8 +63,6 @@ const XS: X[] = [
     blurb: "The social network shaping design outcomes.",
     ring: "who",
   },
-
-  // world (systems/ecologies)
   {
     name: "More-than-human",
     slug: "more-than-human",
@@ -107,7 +101,7 @@ const XS: X[] = [
   },
 ];
 
-const RING_ORDER: Array<{ key: X["ring"]; title: string }> = [
+const RINGS: Array<{ key: X["ring"]; title: string }> = [
   { key: "core", title: "Core (Why)" },
   { key: "practice", title: "Practice (How)" },
   { key: "who", title: "Relations (Who)" },
@@ -115,6 +109,14 @@ const RING_ORDER: Array<{ key: X["ring"]; title: string }> = [
 ];
 
 export default function XsPage() {
+  const [active, setActive] = useState<X | null>(null);
+  const [filter, setFilter] = useState<string | null>(null);
+
+  const filtered = useMemo(() => {
+    if (!filter) return XS;
+    return XS.filter((x) => x.slug === filter);
+  }, [filter]);
+
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
       <section className="mx-auto max-w-6xl px-6 py-24">
@@ -123,15 +125,43 @@ export default function XsPage() {
             Xs — Dimensions
           </h1>
           <p className="mt-3 text-neutral-300">
-            Xs are the dimensions guiding our consciousness to spot what we
-            circle and value. Xs are divided into categories as a semantic map
-            of meaning, practice, relations, and world.
+            Click any dimension to see its definition, filter posts, or open its
+            SEO page.
           </p>
         </div>
 
-        <div className="mt-12 space-y-12">
-          {RING_ORDER.map(({ key, title }) => {
-            const items = XS.filter((x) => x.ring === key);
+        {/* Filter pills */}
+        <div className="mt-6 flex flex-wrap gap-2">
+          <button
+            className={`rounded-full border px-3 py-1 text-sm ${
+              !filter
+                ? "border-emerald-500 text-emerald-400"
+                : "border-neutral-700 text-neutral-300 hover:border-neutral-600"
+            }`}
+            onClick={() => setFilter(null)}
+          >
+            All
+          </button>
+          {XS.map((x) => (
+            <button
+              key={x.slug}
+              className={`rounded-full border px-3 py-1 text-sm ${
+                filter === x.slug
+                  ? "border-emerald-500 text-emerald-400"
+                  : "border-neutral-700 text-neutral-300 hover:border-neutral-600"
+              }`}
+              onClick={() => setFilter(x.slug)}
+            >
+              {x.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Grouped grid */}
+        <div className="mt-10 space-y-12">
+          {RINGS.map(({ key, title }) => {
+            const items = filtered.filter((x) => x.ring === key);
+            if (items.length === 0) return null;
             return (
               <section key={key}>
                 <h2 className="text-xl font-semibold text-neutral-200">
@@ -139,9 +169,8 @@ export default function XsPage() {
                 </h2>
                 <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                   {items.map((x) => (
-                    <a
+                    <div
                       key={x.slug}
-                      href={`/xs/${x.slug}`}
                       className="group rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5 transition hover:border-neutral-700 hover:bg-neutral-900"
                     >
                       <div className="flex items-center justify-between">
@@ -151,10 +180,21 @@ export default function XsPage() {
                         </span>
                       </div>
                       <p className="mt-2 text-sm text-neutral-300">{x.blurb}</p>
-                      <div className="mt-4 text-sm text-emerald-400/90 group-hover:text-emerald-300">
-                        Explore →
+                      <div className="mt-4 flex gap-4 text-sm">
+                        <button
+                          className="underline text-emerald-400/90 group-hover:text-emerald-300"
+                          onClick={() => setActive(x)}
+                        >
+                          Definition
+                        </button>
+                        <a
+                          className="underline text-neutral-300/90 hover:text-neutral-100"
+                          href={`/xs/${x.slug}`}
+                        >
+                          Open page →
+                        </a>
                       </div>
-                    </a>
+                    </div>
                   ))}
                 </div>
               </section>
@@ -162,6 +202,50 @@ export default function XsPage() {
           })}
         </div>
       </section>
+
+      {/* Modal */}
+      {active && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-6"
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setActive(null)}
+        >
+          <div
+            className="w-full max-w-lg rounded-2xl border border-neutral-800 bg-neutral-900 p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-start justify-between">
+              <h3 className="text-xl font-semibold">{active.name}</h3>
+              <button
+                className="rounded-md border border-neutral-700 px-2 py-1 text-sm hover:bg-neutral-800"
+                onClick={() => setActive(null)}
+                aria-label="Close"
+              >
+                ✕
+              </button>
+            </div>
+            <p className="mt-3 text-neutral-300">{active.blurb}</p>
+            <div className="mt-6 flex gap-4">
+              <button
+                className="rounded-lg border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800"
+                onClick={() => {
+                  setFilter(active.slug);
+                  setActive(null);
+                }}
+              >
+                Filter by this
+              </button>
+              <a
+                href={`/xs/${active.slug}`}
+                className="rounded-lg bg-emerald-500 px-4 py-2 text-sm font-medium text-neutral-950 hover:bg-emerald-400"
+              >
+                Open page →
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
