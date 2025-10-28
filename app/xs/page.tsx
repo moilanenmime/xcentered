@@ -170,9 +170,7 @@ export default function XsPage() {
       <section className="mx-auto max-w-4xl px-6 py-24">
         {/* Title + intro (unchanged) */}
         <div className="max-w-3xl">
-          <h1 className="text-4xl font-semibold tracking-tight">
-            Xs — Dimensions
-          </h1>
+          <h1 className="text-4xl font-semibold tracking-tight">Xs</h1>
           <p className="mt-3 text-neutral-300">
             A research blog combining academic and reflective writings across
             dimensions identified as Xs.
