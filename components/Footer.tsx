@@ -5,11 +5,14 @@ export default function Footer() {
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} X-Centered Design · Marko Moilanen</p>
           <div className="flex gap-4">
-            <a href="https://www.linkedin.com/" target="_blank">
+            <a href="https://www.linkedin.com/in/marko-moilanen-hcd/">
               LinkedIn
             </a>
-            <a href="https://www.researchgate.net/" target="_blank">
+            <a href="https://www.researchgate.net/profile/Marko-Moilanen-2">
               ResearchGate
+            </a>
+            <a href="https://www.oulu.fi/fi/tutkijat/marko-moilanen">
+              University of Oulu
             </a>
             <a href="/privacy">Privacy</a>
           </div>
