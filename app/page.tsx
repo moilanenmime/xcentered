@@ -2,17 +2,16 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
       <section className="mx-auto max-w-5xl px-6 py-24">
-        <div className="inline-flex items-center gap-2 rounded-full border border-neutral-800/80 bg-neutral-900/60 px-4 py-2 text-sm">
+        {/* <div className="inline-flex items-center gap-2 rounded-full border border-neutral-800/80 bg-neutral-900/60 px-4 py-2 text-sm">
           <span className="size-2 rounded-full bg-emerald-400" />
           X-Centered Design
-        </div>
+        </div> */}
 
         <h1 className="mt-8 text-4xl font-semibold tracking-tight sm:text-6xl">
-          We circle and value what we love.
+          X-Centered Design
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-neutral-300">
-          A research blog bringing together both academic and reflective
-          writings — exploring the intersections of HCI, sports, and meaning.
+          We circle and value the target we love.
         </p>
 
         <div className="mt-8 flex gap-4">
