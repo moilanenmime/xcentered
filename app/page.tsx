@@ -8,11 +8,11 @@ export default function Home() {
         </div>
 
         <h1 className="mt-8 text-4xl font-semibold tracking-tight sm:text-6xl">
-          Where design meets existence
+          We circle and value the target we love.
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-neutral-300">
-          Exploring what truly lies at the center of human experience — meaning,
-          humanity, and sport.
+          A research blog bringing together both academic and reflective
+          writings — exploring the intersections of HCI, sports, and meaning.
         </p>
 
         <div className="mt-8 flex gap-4">
