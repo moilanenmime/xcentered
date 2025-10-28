@@ -1,4 +1,8 @@
 // app/xs/[slug]/page.tsx
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 import { notFound } from "next/navigation";
 
 const BLURBS: Record<string, string> = {
