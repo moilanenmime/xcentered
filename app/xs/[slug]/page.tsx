@@ -1,4 +1,5 @@
 // app/xs/[slug]/page.tsx
+
 import { notFound } from "next/navigation";
 
 type Entry = { title: string; blurb: string };
