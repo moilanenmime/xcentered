@@ -8,7 +8,7 @@ export default function Home() {
         </div>
 
         <h1 className="mt-8 text-4xl font-semibold tracking-tight sm:text-6xl">
-          We circle and value the target we love.
+          We circle and value what we love.
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-neutral-300">
           A research blog bringing together both academic and reflective
