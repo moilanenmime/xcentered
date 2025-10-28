@@ -66,6 +66,7 @@ const XS: X[] = [
     blurb: "The moral compass guiding responsible design and technology.",
     ring: "practice",
   },
+
   // who
   {
     name: "Human",
@@ -85,6 +86,7 @@ const XS: X[] = [
     blurb: "The social network shaping design outcomes.",
     ring: "who",
   },
+
   // world
   {
     name: "More-than-human",
@@ -112,15 +114,7 @@ const XS: X[] = [
   },
 ];
 
-const RINGS: Array<{ key: X["ring"]; title: string }> = [
-  { key: "core", title: "Core (Why)" },
-  { key: "practice", title: "Practice (How)" },
-  { key: "who", title: "Relations (Who)" },
-  { key: "world", title: "World (What & Beyond)" },
-];
-
-// Placeholder posts until MDX is wired.
-// Each post has xs: string[] matching the slugs above.
+// Placeholder posts until MDX is wired (xs: slugs)
 const DEMO_POSTS = [
   {
     title: "Where design meets existence",
@@ -149,6 +143,10 @@ const DEMO_POSTS = [
   },
 ];
 
+function getX(slug: string): X | undefined {
+  return XS.find((x) => x.slug === slug);
+}
+
 export default function XsPage() {
   const [active, setActive] = useState<X | null>(null);
   const [filter, setFilter] = useState<string | null>(null);
@@ -169,18 +167,18 @@ export default function XsPage() {
 
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
-      <section className="mx-auto max-w-6xl px-6 py-24">
+      <section className="mx-auto max-w-4xl px-6 py-24">
+        {/* Title + intro (unchanged) */}
         <div className="max-w-3xl">
           <h1 className="text-4xl font-semibold tracking-tight">
             Xs — Dimensions
           </h1>
           <p className="mt-3 text-neutral-300">
-            Click any dimension to see its definition, filter posts, or open its
-            SEO page.
+            Click any dimension to see its definition or filter posts.
           </p>
         </div>
 
-        {/* Filter pills */}
+        {/* Filters (keep these) */}
         <div className="mt-6 flex flex-wrap gap-2">
           <button
             type="button"
@@ -209,58 +207,11 @@ export default function XsPage() {
           ))}
         </div>
 
-        {/* Grouped grid of dimensions */}
-        <div className="mt-10 space-y-12">
-          {RINGS.map(({ key, title }) => {
-            const items = XS.filter((x) => x.ring === key);
-            return (
-              <section key={key}>
-                <h2 className="text-xl font-semibold text-neutral-200">
-                  {title}
-                </h2>
-                <div className="mt-5 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                  {items.map((x) => (
-                    <div
-                      key={x.slug}
-                      className="group rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5 transition hover:border-neutral-700 hover:bg-neutral-900"
-                    >
-                      <div className="flex items-center justify-between gap-3">
-                        <h3 className="text-lg font-medium">{x.name}</h3>
-                        <span className="rounded-full border border-neutral-700 px-2 py-0.5 text-xs text-neutral-400">
-                          {x.ring}
-                        </span>
-                      </div>
-                      <p className="mt-2 text-sm text-neutral-300">{x.blurb}</p>
-                      <div className="mt-4 flex gap-4 text-sm">
-                        <button
-                          type="button"
-                          className="underline text-emerald-400/90 group-hover:text-emerald-300"
-                          onClick={() => setActive(x)}
-                        >
-                          Definition
-                        </button>
-                        <a
-                          className="underline text-neutral-300/90 hover:text-neutral-100"
-                          href={`/xs/${x.slug}`}
-                        >
-                          Open page →
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            );
-          })}
-        </div>
-
-        {/* Posts section */}
+        {/* Latest posts only (no dimension cards) */}
         <div className="mt-16">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold text-neutral-200">
-              {filter
-                ? `Posts tagged: ${XS.find((x) => x.slug === filter)?.name}`
-                : "Latest posts"}
+              {filter ? `Posts tagged: ${getX(filter)?.name}` : "Latest posts"}
             </h2>
             {filter && (
               <button
@@ -284,18 +235,33 @@ export default function XsPage() {
                   key={p.title}
                   className="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5"
                 >
+                  {/* Post title opens the post */}
                   <a
                     className="text-lg font-medium hover:underline"
                     href={p.href}
                   >
                     {p.title}
                   </a>
-                  <p className="mt-2 text-sm text-neutral-400">
-                    Dimensions:{" "}
-                    {p.xs
-                      .map((s) => XS.find((x) => x.slug === s)?.name || s)
-                      .join(" • ")}
-                  </p>
+
+                  {/* Dimension chips: open modal with definition + link to page */}
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {p.xs.map((slug) => {
+                      const x = getX(slug);
+                      if (!x) return null;
+                      return (
+                        <button
+                          key={slug}
+                          type="button"
+                          className="rounded-full border border-neutral-700 px-2.5 py-1 text-xs text-neutral-300 hover:border-neutral-600 hover:text-emerald-300"
+                          onClick={() => setActive(x)}
+                          aria-label={`Open ${x.name} definition`}
+                          title={`Open ${x.name} definition`}
+                        >
+                          {x.name}
+                        </button>
+                      );
+                    })}
+                  </div>
                 </li>
               ))}
             </ul>
@@ -303,7 +269,7 @@ export default function XsPage() {
         </div>
       </section>
 
-      {/* Modal */}
+      {/* Modal for dimension definitions */}
       {active && (
         <div
           className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 p-0 sm:p-6"
@@ -327,7 +293,8 @@ export default function XsPage() {
               </button>
             </div>
             <p className="mt-3 text-neutral-300">{active.blurb}</p>
-            <div className="mt-6 flex gap-4">
+
+            <div className="mt-6 flex gap-3">
               <button
                 type="button"
                 className="rounded-lg border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800"

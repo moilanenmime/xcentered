@@ -71,17 +71,28 @@ export function generateStaticParams() {
   return Object.keys(XS).map((slug) => ({ slug }));
 }
 
-// (Optional) Nice page titles
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const entry = XS[params.slug];
+// (Optional) Nice page titles - FIXED: Made async and await params
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const entry = XS[slug];
   return {
     title: entry ? `${entry.title} · Xs` : "Xs",
     description: entry?.blurb,
   };
 }
 
-export default function XPage({ params }: { params: { slug: string } }) {
-  const entry = XS[params.slug];
+// FIXED: Made async and await params
+export default async function XPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const entry = XS[slug];
   if (!entry) notFound();
 
   return (
