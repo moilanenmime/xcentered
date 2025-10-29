@@ -5,7 +5,7 @@ export default function Footer() {
         {/* Top: 3 columns on lg, 2 on sm, 1 on mobile */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand & Quote */}
-          <div className="text-center sm:text-left">
+          <div className="">
             <h3 className="text-base sm:text-lg font-semibold text-neutral-200">
               X-Centered Design
             </h3>
@@ -15,7 +15,7 @@ export default function Footer() {
           </div>
 
           {/* Connect */}
-          <div className="text-center sm:text-left">
+          <div className="">
             <h3 className="text-xs sm:text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
               Connect
             </h3>
@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
 
           {/* Explore */}
-          <div className="text-center sm:text-left">
+          <div className="">
             <h3 className="text-xs sm:text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
               Explore
             </h3>
@@ -87,19 +87,17 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="mt-10 h-px w-full bg-linear-to-r from-transparent via-neutral-800/60 to-transparent" />
+        {/* Divider (fix class name) */}
+        <div className="mt-10 h-px w-full bg-gradient-to-r from-transparent via-neutral-800/60 to-transparent" />
 
-        {/* Bottom bar: stacked on mobile, row on sm+ */}
-        <div className="mt-6 flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
-          <p className="text-center sm:text-left text-sm text-neutral-500">
+        {/* Bottom bar: left-aligned on mobile, spaced on sm+ */}
+        <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-neutral-500">
             © {new Date().getFullYear()}{" "}
             <span className="text-neutral-300">X-Centered Design</span> · Marko
             Moilanen
           </p>
-
-          {/* Small print; wraps nicely on tiny screens */}
-          <p className="text-center sm:text-right text-xs text-neutral-500 leading-relaxed">
+          <p className="text-xs text-neutral-500 leading-relaxed">
             Crafted with reflection, coffee, and Tailwind CSS.
           </p>
         </div>
