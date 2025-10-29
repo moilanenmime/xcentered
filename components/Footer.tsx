@@ -90,8 +90,8 @@ export default function Footer() {
         {/* Divider (fix class name) */}
         <div className="mt-10 h-px w-full bg-gradient-to-r from-transparent via-neutral-800/60 to-transparent" />
 
-        {/* Bottom bar: left-aligned on mobile, spaced on sm+ */}
-        <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        {/* Bottom bar: centered on all sizes */}
+        <div className="mt-6 flex flex-col items-center gap-2 sm:flex-row sm:items-center sm:justify-center sm:gap-4 text-center">
           <p className="text-sm text-neutral-500">
             © {new Date().getFullYear()}{" "}
             <span className="text-neutral-300">X-Centered Design</span> · Marko
