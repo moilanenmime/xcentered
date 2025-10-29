@@ -57,7 +57,7 @@ export default function Home() {
           Interested in collaboration, research, or just chatting?
         </p>
         <form
-          className="mt-6 grid gap-3 max-w-xl"
+          className="mt-6 md:mt-4 grid gap-3 max-w-xl"
           method="post"
           action="/api/contact"
         >
