@@ -51,7 +51,7 @@ export default function Home() {
       </section>
 
       {/* Contact form */}
-      <section id="contact" className="mx-auto max-w-5xl px-6 py-12 sm:py-20">
+      <section id="contact" className="mx-auto max-w-5xl px-6 py-8 sm:py-20">
         <h2 className="text-2xl font-semibold">Contact Marko</h2>
         <p className="mt-2 text-neutral-300">
           Interested in collaboration, research, or just chatting?
@@ -94,7 +94,10 @@ export default function Home() {
             tabIndex={-1}
             autoComplete="off"
           />
-          <button className="mt-2 w-fit rounded-lg bg-emerald-500 px-6 py-3 font-medium text-neutral-950 hover:bg-emerald-400">
+          <button
+            type="submit"
+            className="mt-2 w-full sm:w-auto mx-auto sm:mx-0 text-center rounded-xl bg-emerald-500 px-5 py-3 font-medium text-neutral-950 hover:bg-emerald-400"
+          >
             Send
           </button>
         </form>
