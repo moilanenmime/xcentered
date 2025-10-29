@@ -7,12 +7,35 @@ export default function Home() {
           X-Centered Design
         </div> */}
 
-        <h1 className="mt-8 text-4xl font-semibold tracking-tight sm:text-6xl">
-          X-Centered Design
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg text-neutral-300">
-          We circle and value the target we love.
-        </p>
+        <section className="mx-auto max-w-4xl px-6 py-24 text-left">
+          {/* Main Title */}
+          <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
+            X-Centered Design
+          </h1>
+
+          {/* Subtitle / Motto */}
+          <p className="mt-4 text-lg sm:text-2xl italic text-emerald-400 font-medium leading-relaxed max-w-3xl">
+            We circle and value what we love
+          </p>
+
+          {/* Personal Letter */}
+          <div className="mt-8 max-w-2xl mx-auto text-lg text-neutral-300 leading-relaxed">
+            <p>Dear reader,</p>
+            <p className="mt-3">
+              Welcome to my exploration of{" "}
+              <strong>Human–Computer Interaction (HCI)</strong> through the
+              dimensions of <strong>X-Centered Design (XCD)</strong> — a way of
+              seeing design not only as function or form, but as a dialogue
+              between e.g. existence, value, and life.
+            </p>
+            <p className="mt-3">
+              Here I share reflections, cases, and theories from the
+              intersection of research and lived experience — where human
+              values, sports, and digital transformation meet.
+            </p>
+            <p className="mt-6 text-right text-neutral-400">— Marko Moilanen</p>
+          </div>
+        </section>
 
         <div className="mt-8 flex gap-4">
           <a
