@@ -12,7 +12,7 @@ export default function Footer() {
               X-Centered Design
             </h3>
             <p className="mt-2 text-sm italic text-emerald-400 leading-snug">
-              “We circle and value what we love.”
+              We circle and value what we love.
             </p>
           </div>
 
