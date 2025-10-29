@@ -1,12 +1,11 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 
 export type PostMeta = {
   title: string;
-  href: string; // e.g. /posts/designing-for-flow
-  date: string; // ISO
-  xs: string[]; // dimension slugs
+  href: string;
+  date: string;
+  xs: string[];
   summary?: string;
   coverImage?: string;
   readingTime?: string;
@@ -17,13 +16,6 @@ export type PostMeta = {
 };
 
 const POSTS_DIR = path.join(process.cwd(), "app", "posts");
-
-// naive reading time (optional)
-function calcReadingTime(text: string) {
-  const words = text.trim().split(/\s+/).length || 0;
-  const minutes = Math.max(1, Math.round(words / 225));
-  return `${minutes} min read`;
-}
 
 export function getAllPosts(): PostMeta[] {
   if (!fs.existsSync(POSTS_DIR)) return [];
@@ -36,47 +28,31 @@ export function getAllPosts(): PostMeta[] {
   const posts: PostMeta[] = [];
 
   for (const slug of slugs) {
-    const mdxPath = path.join(POSTS_DIR, slug, "page.mdx");
-    if (!fs.existsSync(mdxPath)) continue;
+    const metaPath = path.join(POSTS_DIR, slug, "meta.json");
+    if (!fs.existsSync(metaPath)) continue;
 
-    const raw = fs.readFileSync(mdxPath, "utf8");
-    const { data, content } = matter(raw);
+    try {
+      const raw = fs.readFileSync(metaPath, "utf8");
+      const data = JSON.parse(raw);
 
-    // frontmatter validation (lightweight)
-    const title = String(data.title || "");
-    const date = String(data.date || "");
-    const xs = Array.isArray(data.xs) ? (data.xs as string[]) : [];
-    const summary = data.summary ? String(data.summary) : undefined;
-    const coverImage = data.coverImage ? String(data.coverImage) : undefined;
-    const readingTime = data.readingTime
-      ? String(data.readingTime)
-      : calcReadingTime(content);
-    const status = (data.status as "draft" | "published") ?? "published";
-    const featured = Boolean(data.featured);
-    const category = data.category as PostMeta["category"] | undefined;
-    const references = Array.isArray(data.references)
-      ? (data.references as PostMeta["references"])
-      : undefined;
+      if (!data.title || !data.date) continue;
 
-    if (!title || !date) continue; // skip invalid posts
-
-    posts.push({
-      title,
-      href: `/posts/${slug}`,
-      date,
-      xs,
-      summary,
-      coverImage,
-      readingTime,
-      status,
-      featured,
-      category,
-      references,
-    });
+      posts.push({
+        ...data,
+        href: `/posts/${slug}`,
+      });
+    } catch (e) {
+      console.warn(`Failed to parse meta.json for post: ${slug}`);
+      continue;
+    }
   }
 
-  // only published, newest first
   return posts
     .filter((p) => (p.status ?? "published") === "published")
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export function getPostBySlug(slug: string): PostMeta | null {
+  const posts = getAllPosts();
+  return posts.find((p) => p.href === `/posts/${slug}`) || null;
 }

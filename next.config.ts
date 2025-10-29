@@ -6,7 +6,7 @@ const withMDX = createMDX({});
 
 const nextConfig: NextConfig = {
   experimental: {},
-  pageExtensions: ["ts", "tsx", "mdx"], // ← include MDX
+  pageExtensions: ["ts", "tsx", "md", "mdx"], // include mdx
 };
 
 export default withMDX(nextConfig);

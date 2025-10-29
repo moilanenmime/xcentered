@@ -1,0 +1,17 @@
+{
+  "title": "Designing for Flow in Sports Apps",
+  "date": "2025-10-29",
+  "xs": ["flow", "human", "technology"],
+  "summary": "Exploring how sports apps can foster deep engagement through challenge–skill balance and mindful design.",
+  "coverImage": "/images/dummy-image.webp",
+  "readingTime": "4 min read",
+  "status": "published",
+  "featured": true,
+  "category": "Theory",
+  "references": [
+    {
+      "label": "Csikszentmihalyi (1990)",
+      "url": "https://en.wikipedia.org/wiki/Flow_(psychology)"
+    }
+  ]
+}
