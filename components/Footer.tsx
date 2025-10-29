@@ -12,10 +12,6 @@ export default function Footer() {
             <p className="mt-2 text-sm italic text-emerald-400 leading-snug">
               “We circle and value what we love.”
             </p>
-            <p className="mt-3 text-sm text-neutral-400/90">
-              Exploring Human–Computer Interaction through meaning, values, and
-              human-centered reflection.
-            </p>
           </div>
 
           {/* Connect */}
@@ -92,7 +88,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="mt-10 h-px w-full bg-gradient-to-r from-transparent via-neutral-800/60 to-transparent" />
+        <div className="mt-10 h-px w-full bg-linear-to-r from-transparent via-neutral-800/60 to-transparent" />
 
         {/* Bottom bar: stacked on mobile, row on sm+ */}
         <div className="mt-6 flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
