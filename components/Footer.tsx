@@ -1,3 +1,5 @@
+import { Linkedin, BookOpen, Globe } from "lucide-react";
+
 export default function Footer() {
   return (
     <footer className="border-t border-neutral-800/70 bg-neutral-950 text-neutral-400">
