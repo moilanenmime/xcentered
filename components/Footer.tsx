@@ -21,41 +21,42 @@ export default function Footer() {
             <h3 className="text-xs sm:text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
               Connect
             </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/marko-moilanen-hcd/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
-                >
-                  <Linkedin size={16} className="text-emerald-400 shrink-0" />
-                  <span className="leading-none">LinkedIn</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.researchgate.net/profile/Marko-Moilanen-2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
-                >
-                  <BookOpen size={16} className="text-emerald-400 shrink-0" />
-                  <span className="leading-none">ResearchGate</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.oulu.fi/fi/tutkijat/marko-moilanen"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded break-words"
-                >
-                  <Globe size={16} className="text-emerald-400 shrink-0" />
-                  <span className="leading-none">University of Oulu</span>
-                </a>
-              </li>
-            </ul>
+
+            {/* social icons only */}
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.linkedin.com/in/marko-moilanen-hcd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="inline-flex items-center justify-center w-9 h-9 rounded hover:bg-neutral-900/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              >
+                <Linkedin size={18} className="text-emerald-400" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+
+              <a
+                href="https://www.researchgate.net/profile/Marko-Moilanen-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ResearchGate"
+                className="inline-flex items-center justify-center w-9 h-9 rounded hover:bg-neutral-900/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              >
+                <BookOpen size={18} className="text-emerald-400" />
+                <span className="sr-only">ResearchGate</span>
+              </a>
+
+              <a
+                href="https://www.oulu.fi/fi/tutkijat/marko-moilanen"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="University of Oulu"
+                className="inline-flex items-center justify-center w-9 h-9 rounded hover:bg-neutral-900/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              >
+                <Globe size={18} className="text-emerald-400" />
+                <span className="sr-only">University of Oulu</span>
+              </a>
+            </div>
           </div>
 
           {/* Explore */}
