@@ -2,12 +2,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
       <section className="mx-auto max-w-5xl px-6 py-24">
-        {/* <div className="inline-flex items-center gap-2 rounded-full border border-neutral-800/80 bg-neutral-900/60 px-4 py-2 text-sm">
-          <span className="size-2 rounded-full bg-emerald-400" />
-          X-Centered Design
-        </div> */}
-
-        <section className="mx-auto max-w-4xl px-6 py-24 text-left">
+        <section className="mx-auto max-w-4xl px-6">
           {/* Main Title */}
           <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
             X-Centered Design
@@ -36,30 +31,30 @@ export default function Home() {
             </p>
             <p className="mt-6 text-right text-neutral-400">— Marko Moilanen</p>
           </div>
-        </section>
 
-        <div className="mt-8 flex gap-4">
-          <a
-            href="/xs"
-            className="rounded-xl bg-emerald-500 px-5 py-3 font-medium text-neutral-950 hover:bg-emerald-400"
-          >
-            Read the latest Xs
-          </a>
-          <a
-            href="/cases"
-            className="rounded-xl border border-neutral-700 px-5 py-3 font-medium hover:bg-neutral-900"
-          >
-            Explore Cases
-          </a>
-        </div>
+          {/* Buttons moved here and aligned with the letter */}
+          <div className="mt-6 max-w-2xl mx-auto flex gap-4">
+            <a
+              href="/xs"
+              className="rounded-xl bg-emerald-500 px-5 py-3 font-medium text-neutral-950 hover:bg-emerald-400"
+            >
+              Read the latest Xs
+            </a>
+            <a
+              href="/cases"
+              className="rounded-xl border border-neutral-700 px-5 py-3 font-medium hover:bg-neutral-900"
+            >
+              Explore Cases
+            </a>
+          </div>
+        </section>
       </section>
 
-      {/* // ...keeping the hero above */}
-
+      {/* Contact form */}
       <section id="contact" className="mx-auto max-w-5xl px-6 py-24">
-        <h2 className="text-2xl font-semibold">Contact</h2>
+        <h2 className="text-2xl font-semibold">Contact Marko</h2>
         <p className="mt-2 text-neutral-300">
-          Interested in collaboration, speaking, or research?
+          Interested in collaboration, research, or just chatting?
         </p>
         <form
           className="mt-6 grid gap-3 max-w-xl"
