@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
-      <section className="mx-auto max-w-5xl px-6 py-24">
+      <section className="mx-auto max-w-5xl px-6 py-12 sm:py-24">
         <section className="mx-auto max-w-4xl px-6">
           {/* Main Title */}
           <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
@@ -33,16 +33,16 @@ export default function Home() {
           </div>
 
           {/* Buttons moved here and aligned with the letter */}
-          <div className="mt-6 max-w-2xl mx-auto flex gap-4">
+          <div className="mt-6 max-w-2xl mx-auto flex flex-col sm:flex-row gap-4">
             <a
               href="/xs"
-              className="rounded-xl bg-emerald-500 px-5 py-3 font-medium text-neutral-950 hover:bg-emerald-400"
+              className="w-full sm:w-auto text-center rounded-xl bg-emerald-500 px-5 py-3 font-medium text-neutral-950 hover:bg-emerald-400"
             >
               Read the Latest Posts
             </a>
             <a
               href="/cases"
-              className="rounded-xl border border-neutral-700 px-5 py-3 font-medium hover:bg-neutral-900"
+              className="w-full sm:w-auto text-center rounded-xl border border-neutral-700 px-5 py-3 font-medium hover:bg-neutral-900"
             >
               Explore Cases
             </a>
@@ -51,7 +51,7 @@ export default function Home() {
       </section>
 
       {/* Contact form */}
-      <section id="contact" className="mx-auto max-w-5xl px-6 py-24">
+      <section id="contact" className="mx-auto max-w-5xl px-6 py-12 sm:py-20">
         <h2 className="text-2xl font-semibold">Contact Marko</h2>
         <p className="mt-2 text-neutral-300">
           Interested in collaboration, research, or just chatting?
