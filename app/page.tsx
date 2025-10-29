@@ -86,7 +86,7 @@ export default function Home() {
             className="rounded-md bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800"
             required
           />
-          {/* Honeypot anti-spam */}
+
           <input
             type="text"
             name="company"
@@ -96,7 +96,7 @@ export default function Home() {
           />
           <button
             type="submit"
-            className="mt-2 w-full sm:w-auto sm:min-w-[160px] text-center rounded-xl bg-emerald-500 sm:px-6 px-5 sm:py-3 py-3 font-medium text-neutral-950 hover:bg-emerald-400"
+            className="mt-2 w-full sm:w-1/3 text-center rounded-xl bg-emerald-500 px-5 py-3 font-medium text-neutral-950 hover:bg-emerald-400 justify-self-start"
           >
             Send
           </button>
