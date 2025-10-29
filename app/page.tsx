@@ -38,7 +38,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="mt-8 flex gap-4">
+        <div className="mt-8 flex gap-2">
           <a
             href="/xs"
             className="rounded-xl bg-emerald-500 px-5 py-3 font-medium text-neutral-950 hover:bg-emerald-400"
