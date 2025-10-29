@@ -13,7 +13,7 @@ export default function DesigningForFlowPost() {
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
       <article className="mx-auto max-w-3xl px-6 py-24">
         <Link
-          href="/posts"
+          href="/xs"
           className="text-sm text-neutral-400 hover:text-neutral-200"
         >
           ← Back to posts
