@@ -25,13 +25,15 @@ export default function Home() {
               Welcome to my exploration of{" "}
               <strong>Human–Computer Interaction (HCI)</strong> through the
               dimensions of <strong>X-Centered Design (XCD)</strong> — a way of
-              seeing design not only as function or form, but as a dialogue
-              between e.g. existence, value, and life.
+              understanding design not only as function or process, but as a
+              living dialogue between dimensions such as existence, value, and
+              humanity.
             </p>
             <p className="mt-3">
-              Here I share reflections, cases, and theories from the
-              intersection of research and lived experience — where human
-              values, sports, and digital transformation meet.
+              Here, I share reflections, cases, and theories drawn from my
+              research and experience — aiming to uncover foundational
+              principles and express higher values through sports applications
+              and digital transformation.
             </p>
             <p className="mt-6 text-right text-neutral-400">— Marko Moilanen</p>
           </div>
