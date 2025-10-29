@@ -1,22 +1,26 @@
 export default function Footer() {
   return (
     <footer className="border-t border-neutral-800/70 bg-neutral-950 text-neutral-400">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-10">
-        {/* Grid Layout: single column by default, 2 cols at sm, 3 at lg */}
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+        {/* Top: 3 columns on lg, 2 on sm, 1 on mobile */}
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand & Quote */}
-          <div>
-            <h3 className="text-lg font-semibold text-neutral-200">
+          <div className="text-center sm:text-left">
+            <h3 className="text-base sm:text-lg font-semibold text-neutral-200">
               X-Centered Design
             </h3>
-            <p className="mt-2 text-sm italic text-emerald-400 leading-tight">
-              We circle and value what we love.
+            <p className="mt-2 text-sm italic text-emerald-400 leading-snug">
+              “We circle and value what we love.”
+            </p>
+            <p className="mt-3 text-sm text-neutral-400/90">
+              Exploring Human–Computer Interaction through meaning, values, and
+              human-centered reflection.
             </p>
           </div>
 
-          {/* Connect Links */}
-          <div>
-            <h3 className="text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
+          {/* Connect */}
+          <div className="text-center sm:text-left">
+            <h3 className="text-xs sm:text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
               Connect
             </h3>
             <ul className="space-y-2 text-sm">
@@ -25,9 +29,9 @@ export default function Footer() {
                   href="https://www.linkedin.com/in/marko-moilanen-hcd/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block hover:text-emerald-400 transition-colors break-words"
+                  className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
                 >
-                  LinkedIn
+                  <span className="leading-none">LinkedIn</span>
                 </a>
               </li>
               <li>
@@ -35,9 +39,9 @@ export default function Footer() {
                   href="https://www.researchgate.net/profile/Marko-Moilanen-2"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block hover:text-emerald-400 transition-colors break-words"
+                  className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
                 >
-                  ResearchGate
+                  <span className="leading-none">ResearchGate</span>
                 </a>
               </li>
               <li>
@@ -45,24 +49,24 @@ export default function Footer() {
                   href="https://www.oulu.fi/fi/tutkijat/marko-moilanen"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block hover:text-emerald-400 transition-colors break-words"
+                  className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded break-words"
                 >
-                  University of Oulu
+                  <span className="leading-none">University of Oulu</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Legal & Navigation */}
-          <div>
-            <h3 className="text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
+          {/* Explore */}
+          <div className="text-center sm:text-left">
+            <h3 className="text-xs sm:text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
               Explore
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
                   href="/xs"
-                  className="inline-block hover:text-emerald-400 transition-colors break-words"
+                  className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
                 >
                   Xs — Dimensions
                 </a>
@@ -70,7 +74,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/cases"
-                  className="inline-block hover:text-emerald-400 transition-colors break-words"
+                  className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
                 >
                   Cases
                 </a>
@@ -78,7 +82,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/privacy"
-                  className="inline-block hover:text-emerald-400 transition-colors break-words"
+                  className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
                 >
                   Privacy Policy
                 </a>
@@ -87,18 +91,21 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider — smaller gap and centered compact layout for small screens */}
-        <div className="mt-6 sm:mt-8 border-t border-neutral-800/50 pt-4 sm:pt-6">
-          <div className="flex flex-col items-center gap-1">
-            <p className="text-sm text-neutral-500">
-              © {new Date().getFullYear()}{" "}
-              <span className="text-neutral-300">X-Centered Design</span> ·
-              Marko Moilanen
-            </p>
-            <p className="mt-1 text-xs text-neutral-500">
-              Crafted with reflection, coffee, and Tailwind CSS.
-            </p>
-          </div>
+        {/* Divider */}
+        <div className="mt-10 h-px w-full bg-gradient-to-r from-transparent via-neutral-800/60 to-transparent" />
+
+        {/* Bottom bar: stacked on mobile, row on sm+ */}
+        <div className="mt-6 flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
+          <p className="text-center sm:text-left text-sm text-neutral-500">
+            © {new Date().getFullYear()}{" "}
+            <span className="text-neutral-300">X-Centered Design</span> · Marko
+            Moilanen
+          </p>
+
+          {/* Small print; wraps nicely on tiny screens */}
+          <p className="text-center sm:text-right text-xs text-neutral-500 leading-relaxed">
+            Crafted with reflection, coffee, and Tailwind CSS.
+          </p>
         </div>
       </div>
     </footer>
