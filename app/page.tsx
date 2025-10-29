@@ -96,7 +96,7 @@ export default function Home() {
           />
           <button
             type="submit"
-            className="mt-2 w-full sm:w-auto mx-auto sm:mx-0 text-center rounded-xl bg-emerald-500 px-5 py-3 font-medium text-neutral-950 hover:bg-emerald-400"
+            className="mt-2 w-full sm:w-auto justify-self-center sm:justify-self-start text-center rounded-xl bg-emerald-500 px-5 py-3 font-medium text-neutral-950 hover:bg-emerald-400"
           >
             Send
           </button>
