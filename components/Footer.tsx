@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
 
           {/* Connect */}
-          <div className="">
+          <div>
             <h3 className="text-xs sm:text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
               Connect
             </h3>
@@ -29,6 +29,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
                 >
+                  <Linkedin size={16} className="text-emerald-400 shrink-0" />
                   <span className="leading-none">LinkedIn</span>
                 </a>
               </li>
@@ -39,6 +40,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
                 >
+                  <BookOpen size={16} className="text-emerald-400 shrink-0" />
                   <span className="leading-none">ResearchGate</span>
                 </a>
               </li>
@@ -49,6 +51,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded break-words"
                 >
+                  <Globe size={16} className="text-emerald-400 shrink-0" />
                   <span className="leading-none">University of Oulu</span>
                 </a>
               </li>
@@ -58,25 +61,9 @@ export default function Footer() {
           {/* Explore */}
           <div className="">
             <h3 className="text-xs sm:text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
-              Explore
+              Legal
             </h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="/xs"
-                  className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
-                >
-                  Xs — Dimensions
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/cases"
-                  className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
-                >
-                  Cases
-                </a>
-              </li>
               <li>
                 <a
                   href="/privacy"
