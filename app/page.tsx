@@ -38,7 +38,7 @@ export default function Home() {
               href="/xs"
               className="rounded-xl bg-emerald-500 px-5 py-3 font-medium text-neutral-950 hover:bg-emerald-400"
             >
-              Read the latest Xs
+              Read the Latest Posts
             </a>
             <a
               href="/cases"
