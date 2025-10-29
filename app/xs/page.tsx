@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 
+/* ---------- Types ---------- */
 type X = {
   name: string;
   slug: string;
@@ -8,6 +9,18 @@ type X = {
   ring: "core" | "practice" | "who" | "world";
 };
 
+type PostMeta = {
+  title: string;
+  href: string; // e.g. /posts/designing-for-flow
+  date: string; // ISO
+  xs: string[]; // dimension slugs
+  summary?: string;
+  coverImage?: string;
+  readingTime?: string;
+  // you can add: status, featured, category, references... if you render them
+};
+
+/* ---------- Dimensions (definitions for modal) ---------- */
 const XS: X[] = [
   // core
   {
@@ -114,42 +127,48 @@ const XS: X[] = [
   },
 ];
 
-// Placeholder posts until MDX is wired (xs: slugs)
-const DEMO_POSTS = [
-  {
-    title: "Where design meets existence",
-    href: "/xs/meaning",
-    xs: ["meaning", "existence", "design"],
-  },
-  {
-    title: "Designing for flow in sports apps",
-    href: "#",
-    xs: ["flow", "human", "technology"],
-  },
-  {
-    title: "Evaluation as meaning-making",
-    href: "#",
-    xs: ["evaluation", "meaning"],
-  },
-  {
-    title: "Conscience for AI",
-    href: "#",
-    xs: ["ethics", "technology", "humanity"],
-  },
-  {
-    title: "More-than-human disc golf",
-    href: "#",
-    xs: ["more-than-human", "nature", "human"],
-  },
-];
-
+/* ---------- Helpers ---------- */
 function getX(slug: string): X | undefined {
   return XS.find((x) => x.slug === slug);
 }
 
+function formatDate(iso: string) {
+  try {
+    return new Date(iso).toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    });
+  } catch {
+    return iso;
+  }
+}
+
+/* ---------- Page ---------- */
 export default function XsPage() {
-  const [active, setActive] = useState<X | null>(null);
-  const [filter, setFilter] = useState<string | null>(null);
+  const [active, setActive] = useState<X | null>(null); // modal dimension
+  const [filter, setFilter] = useState<string | null>(null); // selected dimension slug
+  const [posts, setPosts] = useState<PostMeta[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch real posts from /api/posts
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        const res = await fetch("/api/posts", { cache: "no-store" });
+        const data = (await res.json()) as PostMeta[];
+        if (mounted) setPosts(data);
+      } catch {
+        if (mounted) setPosts([]);
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    })();
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
   // Lock background scroll when modal is open (mobile-friendly)
   useEffect(() => {
@@ -161,14 +180,14 @@ export default function XsPage() {
   }, [active]);
 
   const filteredPosts = useMemo(() => {
-    if (!filter) return DEMO_POSTS;
-    return DEMO_POSTS.filter((p) => p.xs.includes(filter));
-  }, [filter]);
+    if (!filter) return posts;
+    return posts.filter((p) => p.xs?.includes(filter));
+  }, [posts, filter]);
 
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
       <section className="mx-auto max-w-4xl px-6 py-24">
-        {/* Title + intro (unchanged) */}
+        {/* Title + intro */}
         <div className="max-w-3xl">
           <h1 className="text-4xl font-semibold tracking-tight">Xs</h1>
           <p className="mt-3 text-neutral-300">
@@ -178,7 +197,7 @@ export default function XsPage() {
           </p>
         </div>
 
-        {/* Filters (keep these) */}
+        {/* Filters */}
         <div className="mt-6 flex flex-wrap gap-2">
           <button
             type="button"
@@ -207,7 +226,7 @@ export default function XsPage() {
           ))}
         </div>
 
-        {/* Latest posts only (no dimension cards) */}
+        {/* Posts */}
         <div className="mt-16">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold text-neutral-200">
@@ -224,7 +243,9 @@ export default function XsPage() {
             )}
           </div>
 
-          {filteredPosts.length === 0 ? (
+          {loading ? (
+            <p className="mt-3 text-neutral-400">Loading…</p>
+          ) : filteredPosts.length === 0 ? (
             <p className="mt-3 text-neutral-400">
               No posts match this dimension yet.
             </p>
@@ -232,25 +253,46 @@ export default function XsPage() {
             <ul className="mt-5 grid gap-4 sm:grid-cols-2">
               {filteredPosts.map((p) => (
                 <li
-                  key={p.title}
+                  key={p.href}
                   className="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5"
                 >
-                  {/* Post title opens the post */}
+                  {/* Optional cover image */}
+                  {p.coverImage && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={p.coverImage}
+                      alt=""
+                      className="mb-3 h-36 w-full rounded-xl object-cover"
+                    />
+                  )}
+
+                  {/* Date + reading time */}
+                  <div className="text-xs text-neutral-400">
+                    {formatDate(p.date)}
+                    {p.readingTime ? ` · ${p.readingTime}` : null}
+                  </div>
+
+                  {/* Title → opens the post */}
                   <a
-                    className="text-lg font-medium hover:underline"
+                    className="mt-1 block text-lg font-medium hover:underline"
                     href={p.href}
                   >
                     {p.title}
                   </a>
 
+                  {/* Summary (optional) */}
+                  {p.summary && (
+                    <p className="mt-2 text-sm text-neutral-300">{p.summary}</p>
+                  )}
+
                   {/* Dimension chips: open modal with definition + link to page */}
                   <div className="mt-3 flex flex-wrap gap-2">
-                    {p.xs.map((slug) => {
+                    {p.xs?.map((slug) => {
                       const x = getX(slug);
                       if (!x) return null;
                       return (
                         <button
-                          key={slug}
+                          key={`${p.href}-${slug}`}
                           type="button"
                           className="rounded-full border border-neutral-700 px-2.5 py-1 text-xs text-neutral-300 hover:border-neutral-600 hover:text-emerald-300"
                           onClick={() => setActive(x)}

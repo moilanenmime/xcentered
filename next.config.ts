@@ -1,7 +1,12 @@
+// next.config.ts
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
+
+const withMDX = createMDX({});
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {},
+  pageExtensions: ["ts", "tsx", "mdx"], // ← include MDX
 };
 
-export default nextConfig;
+export default withMDX(nextConfig);
