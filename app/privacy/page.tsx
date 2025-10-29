@@ -22,7 +22,7 @@ export default function PrivacyPage() {
           </li>
           <li>
             <strong>Basic analytics:</strong> anonymous page views and referrers
-            (no cookies).
+            collected via Vercel Analytics (no cookies).
           </li>
         </ul>
 
@@ -46,8 +46,22 @@ export default function PrivacyPage() {
             server logs may be retained briefly for security and operations.
           </li>
           <li>
-            <strong>Analytics:</strong> if enabled later, Plausible is
-            cookie-free and stores only anonymous statistics.
+            <strong>Analytics:</strong> I use Vercel Analytics to collect
+            aggregated, anonymous metrics (page views, referrers, basic
+            geography and device information). Vercel Analytics does not use
+            cookies or collect personally identifiable information; data is
+            provided to me as aggregated reports and cannot be used to identify
+            individual visitors. Vercel may transiently process IP addresses to
+            derive coarse geographic data, but raw IPs or other identifiers are
+            not exposed to me. For details, see{" "}
+            <a
+              href="https://vercel.com/docs/analytics/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Vercel Analytics privacy policy
+            </a>
+            .
           </li>
         </ul>
 
@@ -66,9 +80,8 @@ export default function PrivacyPage() {
 
         <h2>Third parties</h2>
         <ul>
-          <li>Vercel (hosting & edge network)</li>
+          <li>Vercel (hosting, edge network & anonymous analytics)</li>
           <li>Resend (transactional email)</li>
-          <li>Plausible (privacy-first analytics)</li>
         </ul>
 
         <p className="text-neutral-400">

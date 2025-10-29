@@ -3,32 +3,11 @@ export default function Footer() {
     <footer className="border-t border-neutral-800/70">
       <div className="mx-auto max-w-5xl px-6 py-12">
         {/* Main Footer Content */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {/* Contact Section */}
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+          {/* Contact Links */}
           <div>
             <h3 className="text-sm font-semibold text-neutral-200 mb-3">
-              Contact
-            </h3>
-            <div className="space-y-2 text-sm text-neutral-400">
-              <a
-                href="#contact"
-                className="block hover:text-neutral-200 transition-colors"
-              >
-                Send message
-              </a>
-              <a
-                href="mailto:moilanenmime@gmail.com"
-                className="block hover:text-neutral-200 transition-colors"
-              >
-                Email directly
-              </a>
-            </div>
-          </div>
-
-          {/* Academic Links */}
-          <div>
-            <h3 className="text-sm font-semibold text-neutral-200 mb-3">
-              Academic
+              Let's Contact
             </h3>
             <div className="space-y-2 text-sm text-neutral-400">
               <a
