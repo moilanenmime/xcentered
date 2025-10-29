@@ -4,7 +4,9 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Flash from "@/components/Flash";
 import { Suspense } from "react";
+import { Analytics } from "@vercel/analytics/next";
 import { Inter } from "next/font/google";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,12 +27,11 @@ export default function RootLayout({
       <body className={inter.className + " bg-neutral-950 text-neutral-100"}>
         <Nav />
         <Suspense fallback={null}>
-          {" "}
-          {/* ✅ wrap Flash in Suspense */}
           <Flash />
         </Suspense>
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
