@@ -7,7 +7,7 @@ export default function Footer() {
           {/* Contact Links */}
           <div>
             <h3 className="text-sm font-semibold text-neutral-200 mb-3">
-              Let's Contact
+              Let's Connect
             </h3>
             <div className="space-y-2 text-sm text-neutral-400">
               <a
