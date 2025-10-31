@@ -47,7 +47,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://www.oulu.fi/fi/tutkijat/marko-moilanen"
+                href="https://www.oulu.fi/en/researchers/marko-moilanen"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="University of Oulu"
