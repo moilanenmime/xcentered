@@ -88,7 +88,7 @@ export default function Footer() {
             Moilanen
           </p>
           <p className="text-xs text-neutral-500 leading-relaxed">
-            Crafted with reflection, coffee, and Tailwind CSS.
+            Crafted with human love and vibe coding.
           </p>
         </div>
       </div>
