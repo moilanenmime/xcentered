@@ -55,14 +55,14 @@ export default function DesigningForFlowPost() {
         {/* Post content */}
         <div className="prose prose-invert mt-12 max-w-none">
           <h1 className="text-3xl font-bold">
-            Designing for Flow in Sports Apps
+            Designing for Flow in Sports Apps (example post)
           </h1>
 
           <p className="text-lg leading-relaxed">
-            Intro paragraph…{" "}
-            <em>
+            This blog is under construction…{" "}
+            {/* <em>
               (write freely in regular JSX; you can style with Tailwind classes)
-            </em>
+            </em> */}
           </p>
 
           <h2 className="mt-12 text-2xl font-semibold">Key ideas</h2>
@@ -72,9 +72,9 @@ export default function DesigningForFlowPost() {
             <li>Attention shaping & ethical nudging</li>
           </ul>
 
-          <p className="mt-8">
+          {/* <p className="mt-8">
             <em>(You can add images like this if present in /public/images)</em>
-          </p>
+          </p> */}
 
           {/* References */}
           {post.references && (
