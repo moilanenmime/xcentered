@@ -19,29 +19,29 @@ export default function AcademicPage() {
             <h2 className="text-xl font-semibold">Research Focus</h2>
             <ul className="mt-4 list-disc pl-6 text-neutral-300 space-y-2">
               <li>
-                Meaning- and existence-centered design in HCI (HCI-Ikigai).
+                Meaning- and existence-centered design in HCI (HCI-Ikigai)
               </li>
               <li>
                 Humanity-centered design at ecosystem scale (stakeholders, value
-                tensions, long-term consequences).
+                tensions, long-term consequences)
               </li>
               <li>
                 SportsHCI and disc golf as a living ecosystem for studying
-                digital transformation in practice.
+                digital transformation in practice
               </li>
               <li>
                 Evaluation as system intelligence (usability, UX, and
-                meaning-level alignment).
+                meaning-level alignment)
               </li>
               <li>
                 Ethical AI design and operationalizing value-based guidance (AI
-                Conscience).
+                Conscience)
               </li>
             </ul>
           </article>
 
           {/* Research Questions */}
-          <article className="rounded-2xl bg-neutral-950/40 p-6 ring-1 ring-neutral-800">
+          {/* <article className="rounded-2xl bg-neutral-950/40 p-6 ring-1 ring-neutral-800">
             <h2 className="text-xl font-semibold">Research Questions</h2>
             <ol className="mt-4 list-decimal pl-6 text-neutral-300 space-y-2">
               <li>
@@ -63,31 +63,52 @@ export default function AcademicPage() {
                 meaning-centered design in HCI?
               </li>
             </ol>
-          </article>
+          </article> */}
 
           {/* Publications */}
           <article className="rounded-2xl bg-neutral-950/40 p-6 ring-1 ring-neutral-800">
-            <h2 className="text-xl font-semibold">Selected Publications</h2>
+            <h2 className="text-xl font-semibold">Publications</h2>
+
             <p className="mt-3 text-neutral-300 leading-relaxed">
-              A short selection is listed here. A full publication list can be
-              provided upon request.
+              Peer-reviewed publications in Human–Computer Interaction (HCI) and
+              SportsHCI.
             </p>
 
-            <ul className="mt-4 list-disc pl-6 text-neutral-300 space-y-2">
-              <li>
-                HCI-Ikigai: a conceptual model for integrating meaning into HCI
-                design and evaluation (includes a real-world case
-                demonstration).
-              </li>
-              <li>
-                Design principles and framework work in SportsHCI (disc golf as
-                an applied domain).
-              </li>
-              <li>
-                AI Conscience: ethical and meaning-centered principles for AI
-                system design (published abstract).
-              </li>
-            </ul>
+            <div className="mt-6 space-y-6 text-neutral-300">
+              {/* Paper 1 */}
+              <div>
+                <p className="font-medium text-neutral-100">
+                  Guidelines for Disc Golf Applications and Design Principles
+                  for SportsHCI: A Human-Centered Approach
+                </p>
+                <p className="mt-1 text-sm text-neutral-400">ACM Publication</p>
+                <a
+                  href="https://dl.acm.org/doi/10.1145/3701571.3701584"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-sm underline hover:text-neutral-200"
+                >
+                  https://doi.org/10.1145/3701571.3701584
+                </a>
+              </div>
+
+              {/* Paper 2 */}
+              <div>
+                <p className="font-medium text-neutral-100">
+                  Defining HCI-Ikigai: Designing for Existence and Meaning in
+                  Human-Centered Design
+                </p>
+                <p className="mt-1 text-sm text-neutral-400">ACM Publication</p>
+                <a
+                  href="https://dl.acm.org/doi/10.1145/3757980.3758008"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-sm underline hover:text-neutral-200"
+                >
+                  https://doi.org/10.1145/3757980.3758008
+                </a>
+              </div>
+            </div>
           </article>
 
           {/* Supervision */}
