@@ -75,17 +75,6 @@ export default function AcademicPage() {
             </p>
 
             <div className="mt-6 space-y-6 text-neutral-300">
-              <div className="mt-4">
-                <a
-                  href="https://scholar.google.com/citations?user=LvZRVucAAAAJ&hl=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm underline hover:text-neutral-200"
-                >
-                  View full publication list on Google Scholar
-                </a>
-              </div>
-
               {/* Paper 1 */}
               <div>
                 <p className="font-medium text-neutral-100">
@@ -117,6 +106,16 @@ export default function AcademicPage() {
                   className="mt-2 inline-block text-sm underline hover:text-neutral-200"
                 >
                   https://doi.org/10.1145/3757980.3758008
+                </a>
+              </div>
+              <div className="mt-4">
+                <a
+                  href="https://scholar.google.com/citations?user=LvZRVucAAAAJ&hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-neutral-400 hover:text-neutral-200 underline-offset-4 hover:underline"
+                >
+                  View full publication list on Google Scholar
                 </a>
               </div>
             </div>
