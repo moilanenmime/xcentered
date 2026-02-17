@@ -119,8 +119,8 @@ export default function AcademicPage() {
           <article className="rounded-2xl bg-neutral-950/40 p-6 ring-1 ring-neutral-800">
             <h2 className="text-xl font-semibold">Academic CV</h2>
             <p className="mt-3 text-neutral-300 leading-relaxed">
-              For an up-to-date academic CV (including teaching, service,
-              publications, and talks), please contact me.
+              For an up-to-date academic CV (including publications, teaching,
+              and funding information), please contact me.
             </p>
 
             <div className="mt-6">
