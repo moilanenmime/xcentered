@@ -53,7 +53,7 @@ export default function Home() {
         </div>
 
         {/* ROW 2 — Text + Buttons centered */}
-        <div className="mt-20 max-w-3xl mx-auto text-lg text-neutral-300 leading-relaxed text-left">
+        <div className="mt-10 sm:mt-20 max-w-3xl mx-auto text-lg text-neutral-300 leading-relaxed text-left">
           <p>
             I engage in selected advisory collaborations alongside my academic
             research. My work focuses on clarifying complex digital initiatives
