@@ -10,7 +10,7 @@ export default function Home() {
             <div className="relative h-full w-full overflow-hidden rounded-2xl ring-1 ring-neutral-800 bg-neutral-900">
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black via-neutral-950/50 to-transparent" />
               <Image
-                src="/images/marko.jpg"
+                src="/images/Marko.jpg"
                 alt="Marko Moilanen"
                 width={1600}
                 height={900}
