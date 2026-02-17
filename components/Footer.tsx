@@ -1,4 +1,4 @@
-import { Linkedin, BookOpen, Globe } from "lucide-react";
+import { Linkedin, BookOpen, Globe, Heart } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,10 +9,13 @@ export default function Footer() {
           {/* Brand & Quote */}
           <div className="">
             <h3 className="text-base sm:text-lg font-semibold text-neutral-200">
-              X-Centered Design
+              Marko Moilanen
             </h3>
             <p className="mt-2 text-sm italic text-emerald-400 leading-snug">
-              We circle and value what we love.
+              Strategic human-centered systems thinker
+            </p>
+            <p className="mt-1 text-sm text-neutral-500">
+              Doctoral Researcher · University of Oulu
             </p>
           </div>
 
@@ -84,11 +87,16 @@ export default function Footer() {
         <div className="mt-6 flex flex-col items-center gap-2 sm:flex-row sm:items-center sm:justify-center sm:gap-4 text-center">
           <p className="text-sm text-neutral-500">
             © {new Date().getFullYear()}{" "}
-            <span className="text-neutral-300">X-Centered Design</span> · Marko
-            Moilanen
+            <span className="text-neutral-300">Marko Moilanen</span>
           </p>
           <p className="text-xs text-neutral-500 leading-relaxed">
-            Crafted with human love and vibe coding.
+            Crafted with a human
+            <Heart
+              size={14}
+              className="mx-1 inline-block -translate-y-px text-emerald-400"
+              aria-hidden="true"
+            />
+            and vibe coding.
           </p>
         </div>
       </div>

@@ -8,29 +8,35 @@ export default function Nav() {
     <header className="sticky top-0 z-50 border-b border-neutral-800/70 bg-neutral-950/70 backdrop-blur">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
         {/* Logo */}
-        <a href="/" className="font-semibold">
-          X-Centered Design
+
+        <a
+          href="/"
+          className="flex items-center gap-2 text-sm font-semibold tracking-widest text-neutral-200 hover:text-neutral-100"
+          aria-label="Home"
+        >
+          Marko Moilanen
         </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-6 text-sm text-neutral-300">
-          <a href="/xs" className="hover:text-neutral-100 transition-colors">
-            Xs
-          </a>
-          <a href="/cases" className="hover:text-neutral-100 transition-colors">
-            Cases
-          </a>
           <a
-            href="/author"
+            href="/consulting"
             className="hover:text-neutral-100 transition-colors"
           >
-            Author
+            Consulting
           </a>
           <a
-            href="#contact"
+            href="/projects"
             className="hover:text-neutral-100 transition-colors"
           >
-            Contact
+            Projects
+          </a>
+
+          <a
+            href="/academic"
+            className="hover:text-neutral-100 transition-colors"
+          >
+            Academic
           </a>
         </div>
 
@@ -67,32 +73,18 @@ export default function Nav() {
         <div className="border-t border-neutral-800/70 bg-neutral-950/90 backdrop-blur">
           <div className="flex flex-col py-4 px-6 space-y-3">
             <a
-              href="/xs"
+              href="/consulting"
               className="text-neutral-300 hover:text-neutral-100 transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Xs
+              Consulting
             </a>
             <a
-              href="/cases"
+              href="/projects"
               className="text-neutral-300 hover:text-neutral-100 transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Cases
-            </a>
-            <a
-              href="/author"
-              className="text-neutral-300 hover:text-neutral-100 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Author
-            </a>
-            <a
-              href="#contact"
-              className="text-neutral-300 hover:text-neutral-100 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
+              Projects
             </a>
           </div>
         </div>

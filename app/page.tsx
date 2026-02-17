@@ -1,106 +1,81 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
       <section className="mx-auto max-w-5xl px-6 py-12 sm:py-24">
-        <section className="mx-auto max-w-4xl px-6">
-          {/* Main Title */}
-          <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
-            X-Centered Design
-          </h1>
+        {/* ROW 1 — Name + Image */}
+        <div className="relative grid gap-12 items-center md:grid-cols-2 md:min-h-[336px] md:sm:min-h-[416px]">
+          <div className="pointer-events-none absolute inset-0 hidden md:block">
+            <div className="relative h-full w-full overflow-hidden rounded-2xl ring-1 ring-neutral-800 bg-neutral-900">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black via-neutral-950/50 to-transparent" />
+              <Image
+                src="/images/marko.jpg"
+                alt="Marko Moilanen"
+                width={1600}
+                height={900}
+                className="h-full w-full object-cover"
+                priority
+              />
+            </div>
+          </div>
 
-          {/* Subtitle / Motto */}
-          <p className="mt-4 text-lg sm:text-2xl italic text-emerald-400 font-medium leading-relaxed max-w-3xl">
-            We circle and value what we love
+          <div className="relative z-10 md:ml-[50px]">
+            <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
+              Marko
+              <br />
+              Moilanen
+            </h1>
+
+            <p className="mt-6 text-lg sm:text-l italic text-emerald-400 font-medium leading-relaxed max-w-xl">
+              Strategic human-centered systems thinker
+            </p>
+            {/* Credibility Anchor */}
+            <p className=" text-sm text-neutral-500">
+              Doctoral researcher, University of Oulu
+            </p>
+          </div>
+
+          <div className="hidden md:block" aria-hidden="true" />
+
+          <div className="md:hidden">
+            <div className="relative w-full overflow-hidden rounded-2xl ring-1 ring-neutral-800 bg-neutral-900">
+              <Image
+                src="/images/marko.jpg"
+                alt="Marko Moilanen"
+                width={900}
+                height={1100}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* ROW 2 — Text + Buttons centered */}
+        <div className="mt-20 max-w-3xl mx-auto text-lg text-neutral-300 leading-relaxed text-left">
+          <p>
+            I engage in selected advisory collaborations alongside my academic
+            research. My work focuses on clarifying complex digital initiatives
+            where human value, stakeholder tensions, and technological
+            development intersect. I support organizations seeking structured
+            evaluation, conceptual clarity, and research-informed direction.
           </p>
-
-          {/* Personal Letter */}
-          <div className="mt-8 max-w-2xl mx-auto text-lg text-neutral-300 leading-relaxed">
-            <p>Dear reader,</p>
-            <p className="mt-3">
-              Welcome to my exploration of{" "}
-              <strong>Human–Computer Interaction (HCI)</strong> through the
-              dimensions of <strong>X-Centered Design (XCD)</strong> — a way of
-              understanding design not only as function or process, but as a
-              living and dynamic interplay circling the core we value most.
-            </p>
-            <p className="mt-3">
-              Here, I share reflections, cases, and theories drawn from my
-              research and experience — aiming to uncover foundational
-              principles and express higher values, currently through sports
-              applications and digital transformation.
-            </p>
-            <p className="mt-6 text-right text-neutral-400">— Marko Moilanen</p>
-          </div>
-
-          {/* Buttons moved here and aligned with the letter */}
-          <div className="mt-6 max-w-2xl mx-auto flex flex-col sm:flex-row gap-4">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10">
             <a
-              href="/xs"
-              className="w-full sm:w-auto text-center rounded-xl bg-emerald-500 px-5 py-3 font-medium text-neutral-950 hover:bg-emerald-400"
+              href="/consulting"
+              className="w-full sm:w-auto text-center rounded-xl bg-emerald-500 px-6 py-3 font-medium text-neutral-950 hover:bg-emerald-400"
             >
-              Read the Latest Posts
+              How I Can Help
             </a>
             <a
-              href="/cases"
-              className="w-full sm:w-auto text-center rounded-xl border border-neutral-700 px-5 py-3 font-medium hover:bg-neutral-900"
+              href="/projects"
+              className="w-full sm:w-auto text-center rounded-xl border border-neutral-700 px-6 py-3 font-medium hover:bg-neutral-900"
             >
-              Explore Cases
+              Selected Projects
             </a>
           </div>
-        </section>
-      </section>
-
-      {/* Contact form */}
-      <section id="contact" className="mx-auto max-w-5xl px-6 py-8 sm:py-20">
-        <h2 className="text-2xl font-semibold">Contact Marko</h2>
-        <p className="mt-2 text-neutral-300">
-          Interested in collaboration, research, or just chatting?
-        </p>
-        <form
-          className="mt-6 md:mt-4 grid gap-3 max-w-xl"
-          method="post"
-          action="/api/contact"
-        >
-          <input
-            name="name"
-            placeholder="Your name"
-            className="rounded-md bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800"
-            required
-          />
-          <input
-            name="email"
-            type="email"
-            placeholder="Your email"
-            className="rounded-md bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800"
-            required
-          />
-          <input
-            name="topic"
-            placeholder="Topic"
-            className="rounded-md bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800"
-          />
-          <textarea
-            name="message"
-            placeholder="Your message"
-            rows={6}
-            className="rounded-md bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800"
-            required
-          />
-
-          <input
-            type="text"
-            name="company"
-            className="hidden"
-            tabIndex={-1}
-            autoComplete="off"
-          />
-          <button
-            type="submit"
-            className="mt-2 w-full sm:w-1/3 text-center rounded-xl bg-emerald-500 px-5 py-3 font-medium text-neutral-950 hover:bg-emerald-400 justify-self-start"
-          >
-            Send
-          </button>
-        </form>
+        </div>
       </section>
     </main>
   );

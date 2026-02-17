@@ -10,11 +10,11 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "X-Centered Design – Where design meets existence",
+  title: "Marko Moilanen – Human- and Meaning-Centered Design Researcher",
   description:
-    "Exploring what truly lies at the center of human experience — meaning, humanity, and sport.",
-  metadataBase: new URL("https://xcentered-design.vercel.app"),
-  openGraph: { title: "X-Centered Design", type: "website" },
+    "Exploring what truly lies at the center of human experience — meaning, humanity, and sports.",
+  metadataBase: new URL("https://markomoilanen.vercel.app"),
+  openGraph: { title: "Marko Moilanen", type: "website" },
 };
 
 export default function RootLayout({

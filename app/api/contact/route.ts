@@ -6,7 +6,7 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic"; // avoid static optimization of this route
 
 const ORIGINS = new Set([
-  "https://xcentered-design.vercel.app",
+  "https://markomoilanen.vercel.app",
   "http://localhost:3000",
 ]);
 
@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
   if (!name || !isEmail || !message) {
     return NextResponse.json(
       { ok: false, error: "Invalid input" },
-      { status: 400 }
+      { status: 400 },
     );
   }
   if (name.length > 120 || topic.length > 200 || message.length > 2000) {
@@ -51,9 +51,9 @@ export async function POST(req: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: "X-Centered <onboarding@resend.dev>",
+      from: "Marko Moilanen <onboarding@resend.dev>",
       to: [process.env.CONTACT_EMAIL || "moilanenmime@gmail.com"],
-      subject: `[X-Centered Contact] ${topic || "New message"}`,
+      subject: `[Marko Moilanen Contact] ${topic || "New message"}`,
       // SDKs differ: support both keys safely
       ...(email ? ({ reply_to: email } as any) : {}),
       text: `From: ${name} <${email}>\nTopic: ${topic}\n\n${message}`,
