@@ -41,7 +41,7 @@ export default function Home() {
           <div className="md:hidden">
             <div className="relative w-full overflow-hidden rounded-2xl ring-1 ring-neutral-800 bg-neutral-900">
               <Image
-                src="/images/marko.jpg"
+                src="/images/Marko.jpg"
                 alt="Marko Moilanen"
                 width={900}
                 height={1100}

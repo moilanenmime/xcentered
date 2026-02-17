@@ -86,6 +86,13 @@ export default function Nav() {
             >
               Projects
             </a>
+            <a
+              href="/academic"
+              className="text-neutral-300 hover:text-neutral-100 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Academic
+            </a>
           </div>
         </div>
       </div>
