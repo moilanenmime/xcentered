@@ -75,6 +75,17 @@ export default function AcademicPage() {
             </p>
 
             <div className="mt-6 space-y-6 text-neutral-300">
+              <div className="mt-4">
+                <a
+                  href="https://scholar.google.com/citations?user=LvZRVucAAAAJ&hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm underline hover:text-neutral-200"
+                >
+                  View full publication list on Google Scholar
+                </a>
+              </div>
+
               {/* Paper 1 */}
               <div>
                 <p className="font-medium text-neutral-100">
@@ -140,8 +151,8 @@ export default function AcademicPage() {
           <article className="rounded-2xl bg-neutral-950/40 p-6 ring-1 ring-neutral-800">
             <h2 className="text-xl font-semibold">Academic CV</h2>
             <p className="mt-3 text-neutral-300 leading-relaxed">
-              For an up-to-date academic CV (including publications, teaching,
-              and funding information), please contact me.
+              For an up-to-date academic CV (including publications,
+              supervising, and funding information), please contact me.
             </p>
 
             <div className="mt-6">
