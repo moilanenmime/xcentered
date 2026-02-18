@@ -20,6 +20,19 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="md:hidden">
+            <div className="relative w-full overflow-hidden rounded-2xl ring-1 ring-neutral-800 bg-neutral-900">
+              <Image
+                src="/images/Marko.jpg"
+                alt="Marko Moilanen"
+                width={900}
+                height={1100}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+          </div>
+
           <div className="relative z-10 md:ml-[50px]">
             <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
               Marko
@@ -37,19 +50,6 @@ export default function Home() {
           </div>
 
           <div className="hidden md:block" aria-hidden="true" />
-
-          <div className="md:hidden">
-            <div className="relative w-full overflow-hidden rounded-2xl ring-1 ring-neutral-800 bg-neutral-900">
-              <Image
-                src="/images/Marko.jpg"
-                alt="Marko Moilanen"
-                width={900}
-                height={1100}
-                className="w-full h-auto object-cover"
-                priority
-              />
-            </div>
-          </div>
         </div>
 
         {/* ROW 2 — Text + Buttons centered */}

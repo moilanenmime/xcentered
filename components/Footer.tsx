@@ -4,79 +4,84 @@ export default function Footer() {
   return (
     <footer className="border-t border-neutral-800/70 bg-neutral-950 text-neutral-400">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-10">
-        {/* Top: 3 columns on lg, 2 on sm, Connect/Explore side by side on mobile */}
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-3">
-          {/* Brand & Quote */}
-          <div className="col-span-2 sm:col-span-1 lg:col-span-1">
-            <h3 className="text-base sm:text-lg font-semibold text-neutral-200">
-              Marko Moilanen
-            </h3>
-            <p className="mt-2 text-sm italic text-emerald-400 leading-snug">
-              Humanity-Centered Systems Architect
-            </p>
-            <p className="mt-1 text-sm text-neutral-500">
-              Doctoral Researcher · University of Oulu
-            </p>
-          </div>
+        {/* Footer Grid */}
 
-          {/* Connect */}
-          <div>
-            <h3 className="text-xs sm:text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
-              Connect
-            </h3>
+        {/* Top: 3 columns on lg, 2 on mobile, Connect/Legal side by side on mobile */}
+        <div className="mx-auto w-full max-w-5xl px-6">
+          <div
+            className="
+      grid grid-cols-2
+      gap-y-8 gap-x-10
+      sm:grid-cols-3
+      sm:gap-x-12
+      lg:grid-cols-[max-content_max-content_max-content]
+      lg:justify-center
+      lg:gap-x-20
+    "
+          >
+            {/* Brand & Quote (full width on mobile) */}
+            <div className="col-span-2 sm:col-span-1 space-y-1">
+              <h3 className="text-base sm:text-lg font-semibold text-neutral-200">
+                Marko Moilanen
+              </h3>
 
-            {/* social icons only */}
-            <div className="flex items-center gap-3">
-              <a
-                href="https://www.linkedin.com/in/marko-moilanen-hcd/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="inline-flex items-center justify-center w-9 h-9 rounded hover:bg-neutral-900/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
-              >
-                <Linkedin size={18} className="text-emerald-400" />
-                <span className="sr-only">LinkedIn</span>
-              </a>
+              <p className="text-sm italic text-emerald-400 leading-snug lg:whitespace-nowrap">
+                Humanity-Centered Systems Architect
+              </p>
 
-              <a
-                href="https://www.researchgate.net/profile/Marko-Moilanen-2"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="ResearchGate"
-                className="inline-flex items-center justify-center w-9 h-9 rounded hover:bg-neutral-900/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
-              >
-                <BookOpen size={18} className="text-emerald-400" />
-                <span className="sr-only">ResearchGate</span>
-              </a>
-
-              <a
-                href="https://www.oulu.fi/en/researchers/marko-moilanen"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="University of Oulu"
-                className="inline-flex items-center justify-center w-9 h-9 rounded hover:bg-neutral-900/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
-              >
-                <Globe size={18} className="text-emerald-400" />
-                <span className="sr-only">University of Oulu</span>
-              </a>
+              <p className="text-sm text-neutral-500 lg:whitespace-nowrap">
+                Doctoral Researcher · University of Oulu
+              </p>
             </div>
-          </div>
 
-          {/* Explore */}
-          <div className="">
-            <h3 className="text-xs sm:text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
-              Legal
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
+            {/* Connect */}
+            <div className="sm:justify-self-center lg:justify-self-auto">
+              <h3 className="text-xs sm:text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
+                Connect
+              </h3>
+
+              <div className="flex items-center gap-3">
                 <a
-                  href="/privacy"
-                  className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
+                  href="https://www.linkedin.com/in/marko-moilanen-hcd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="inline-flex items-center justify-center w-9 h-9 rounded hover:bg-neutral-900/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                 >
-                  Privacy Policy
+                  <Linkedin size={18} className="text-emerald-400" />
+                  <span className="sr-only">LinkedIn</span>
                 </a>
-              </li>
-            </ul>
+
+                <a
+                  href="https://www.oulu.fi/en/researchers/marko-moilanen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="University of Oulu"
+                  className="inline-flex items-center justify-center w-9 h-9 rounded hover:bg-neutral-900/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+                >
+                  <Globe size={18} className="text-emerald-400" />
+                  <span className="sr-only">University of Oulu</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Legal */}
+            <div className="sm:justify-self-center lg:justify-self-auto">
+              <h3 className="text-xs sm:text-sm font-semibold text-neutral-200 mb-3 uppercase tracking-wider">
+                Legal
+              </h3>
+
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a
+                    href="/privacy"
+                    className="inline-flex items-center gap-2 hover:text-emerald-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
