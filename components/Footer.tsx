@@ -10,14 +10,15 @@ export default function Footer() {
         <div className="mx-auto w-full max-w-5xl px-6">
           <div
             className="
-      grid grid-cols-2
-      gap-y-8 gap-x-10
-      sm:grid-cols-3
-      sm:gap-x-12
-      lg:grid-cols-[max-content_max-content_max-content]
-      lg:justify-center
-      lg:gap-x-20
-    "
+    grid grid-cols-2
+    gap-y-8 gap-x-10
+    sm:grid-cols-3
+    sm:gap-x-12
+    lg:grid-cols-[max-content_max-content_max-content]
+    lg:justify-between
+    lg:max-w-4xl
+    lg:mx-auto
+  "
           >
             {/* Brand & Quote (full width on mobile) */}
             <div className="col-span-2 sm:col-span-1 space-y-1">
