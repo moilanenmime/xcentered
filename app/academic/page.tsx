@@ -1,5 +1,11 @@
 // app/academic/page.tsx
 
+export const metadata = {
+  title: "Academic · Marko Moilanen",
+  description:
+    "Overview of my academic research focus, publications, and supervision.",
+};
+
 export default function AcademicPage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">

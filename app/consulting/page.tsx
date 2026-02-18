@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Advisory & Consulting · Marko Moilanen",
+  description:
+    "Alongside my academic research, I engage in selected advisory collaborations where digital initiatives require conceptual clarity, structured evaluation, or human-centered direction.",
+};
+
 export default function ConsultingPage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">

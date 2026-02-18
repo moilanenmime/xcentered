@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Privacy · Marko Moilanen",
+  title: "Privacy Policy · Marko Moilanen",
   description: "What data this site collects and why.",
 };
 

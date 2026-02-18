@@ -1,5 +1,11 @@
 // app/projects/page.tsx
 
+export const metadata = {
+  title: "Projects · Marko Moilanen",
+  description:
+    "A selection of work illustrating how complex systems can be clarified, meaning-level frameworks translated into practical design direction, and organizations supported through structured evaluation and advisory.",
+};
+
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">

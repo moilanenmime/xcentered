@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Marko Moilanen · Humanity-Centered Systems Architect",
+  description:
+    "Doctoral researcher at University of Oulu. I clarify complex digital initiatives where human value, stakeholder tensions, and technological development intersect.",
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
