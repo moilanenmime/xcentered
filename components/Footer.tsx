@@ -4,10 +4,10 @@ export default function Footer() {
   return (
     <footer className="border-t border-neutral-800/70 bg-neutral-950 text-neutral-400">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-10">
-        {/* Top: 3 columns on lg, 2 on sm, 1 on mobile */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Top: 3 columns on lg, 2 on sm, Connect/Explore side by side on mobile */}
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-3">
           {/* Brand & Quote */}
-          <div className="">
+          <div className="col-span-2 sm:col-span-1 lg:col-span-1">
             <h3 className="text-base sm:text-lg font-semibold text-neutral-200">
               Marko Moilanen
             </h3>
