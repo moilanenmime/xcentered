@@ -12,7 +12,7 @@ export default function Footer() {
               Marko Moilanen
             </h3>
             <p className="mt-2 text-sm italic text-emerald-400 leading-snug">
-              Strategic human-centered systems thinker
+              Humanity-Centered Systems Architect
             </p>
             <p className="mt-1 text-sm text-neutral-500">
               Doctoral Researcher · University of Oulu

@@ -28,7 +28,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 text-lg sm:text-l italic text-emerald-400 font-medium leading-relaxed max-w-xl">
-              Strategic human-centered systems thinker
+              Humanity-Centered Systems Architect
             </p>
             {/* Credibility Anchor */}
             <p className=" text-sm text-neutral-500">

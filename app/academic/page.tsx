@@ -6,7 +6,7 @@ export default function AcademicPage() {
       <section className="mx-auto max-w-5xl px-6 py-24">
         <h1 className="text-3xl font-semibold">Academic</h1>
 
-        <p className="mt-6 max-w-3xl text-neutral-300 leading-relaxed">
+        <p className="mt-6 text-neutral-300 leading-relaxed">
           I am a doctoral researcher at the University of Oulu. My research sits
           at the intersection of Human–Computer Interaction (HCI), Information
           Systems (IS), and digital transformation, with a focus on meaning- and
