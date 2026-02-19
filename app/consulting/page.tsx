@@ -1,7 +1,9 @@
+// app/consulting/page.tsx
+
 export const metadata = {
   title: "Advisory & Consulting · Marko Moilanen",
   description:
-    "Alongside my academic research, I engage in selected advisory collaborations where digital initiatives require conceptual clarity, structured evaluation, or human-centered direction.",
+    "Selected advisory collaborations for humanity-centered digital initiatives - when stakeholder complexity, human value, and long-term sustainability require conceptual clarity and structured evaluation.",
 };
 
 export default function ConsultingPage() {
@@ -13,7 +15,10 @@ export default function ConsultingPage() {
         <p className="mt-6 text-neutral-300">
           Alongside my academic research, I engage in selected advisory
           collaborations where digital initiatives require conceptual clarity,
-          structured evaluation, or human-centered direction.
+          structured evaluation, or humanity-centered direction. By
+          humanity-centered, I mean designing and evaluating systems so that
+          human dignity, real stakeholder needs, and long-term societal
+          consequences are not treated as afterthoughts.
         </p>
 
         <p className="mt-4 text-neutral-300">
@@ -29,32 +34,64 @@ export default function ConsultingPage() {
         <ul className="mt-4 list-disc pl-6 text-neutral-300 space-y-4">
           <li>
             <strong>Strategic System Clarification:</strong> When a project,
-            platform, or transformation initiative feels conceptually unclear
-            and needs structured mapping of stakeholders, values, and system
-            boundaries.
+            platform, or transformation initiative feels conceptually
+            unclear—and needs structured mapping of stakeholders, values, system
+            boundaries, and decision trade-offs.
           </li>
 
           <li>
-            <strong>Human-Centered Evaluation:</strong> When an existing digital
-            system requires usability, UX, and meaning-level assessment to
-            identify blind spots and long-term risks.
+            <strong>Humanity-Centered Evaluation:</strong> When an existing
+            digital system needs more than usability checking, such as
+            assessment of value tensions, ethical risks, meaning, and long-term
+            sustainability implications.
           </li>
 
           <li>
-            <strong>Research-Informed Innovation:</strong> When exploring new
-            products, services, or frameworks that require rigorous thinking,
-            conceptual modeling, and alignment with human-centered principles.
+            <strong>Research-Informed Direction:</strong> When exploring new
+            products, services, or frameworks that require conceptual modeling,
+            rigorous evaluation logic, and alignment with humanity-centered
+            principles.
           </li>
         </ul>
+
+        <div className="mt-8 rounded-2xl border border-neutral-800 bg-neutral-950/40 p-6">
+          <h2 className="text-base font-semibold text-neutral-100">
+            Typical focus areas
+          </h2>
+
+          <dl className="mt-4 grid gap-4 text-sm sm:grid-cols-3">
+            <div>
+              <dt className="text-neutral-400">Domains</dt>
+              <dd className="mt-1 text-neutral-200">
+                HCI/UX, digital transformation, sports technology, digital
+                platforms
+              </dd>
+            </div>
+            <div>
+              <dt className="text-neutral-400">Core lens</dt>
+              <dd className="mt-1 text-neutral-200">
+                Human value, stakeholder tensions, ethics, sustainability
+              </dd>
+            </div>
+            <div>
+              <dt className="text-neutral-400">Formats</dt>
+              <dd className="mt-1 text-neutral-200">
+                Workshops, evaluations, advisory sprints, research–industry
+                collaboration
+              </dd>
+            </div>
+          </dl>
+        </div>
 
         <h2 className="mt-12 text-xl font-semibold">
           What an Engagement May Produce
         </h2>
 
         <p className="mt-4 text-neutral-300">
-          Depending on the case, collaborations may result in structured
-          stakeholder maps, evaluation reports, reframed design directions,
-          conceptual models, or research-informed strategic recommendations.
+          Depending on the case, an engagement may produce stakeholder maps,
+          system and value-tension models, evaluation plans and findings,
+          reframed design directions, or research-informed strategic
+          recommendations.
         </p>
 
         <h2 className="mt-12 text-xl font-semibold">Engagement Model</h2>
@@ -76,10 +113,10 @@ export default function ConsultingPage() {
           <h2 className="text-xl font-semibold">Start a Conversation</h2>
 
           <p className="mt-4 text-neutral-300 leading-relaxed">
-            I engage in a limited number of advisory collaborations each year,
-            typically where intellectual rigor and meaningful impact align. If
-            your initiative resonates with this approach, I welcome a brief
-            introduction.
+            I work selectively, typically supporting initiatives where
+            meaningful impact and intellectual rigor are both valued.
+            Engagements range from focused workshops and short evaluations to
+            longer advisory collaborations.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-start">
