@@ -1,9 +1,10 @@
 import Image from "next/image";
 
 export const metadata = {
-  title: "Marko Moilanen · Humanity-Centered Systems Architect",
+  title:
+    "Marko Moilanen — Human-Centered Systems Architect | University of Oulu",
   description:
-    "Doctoral researcher at University of Oulu. I clarify complex digital initiatives where human value, stakeholder tensions, and technological development intersect.",
+    "Doctoral researcher at the University of Oulu (HCI/UX, digital transformation). I help organizations evaluate complex digital initiatives, stakeholder tensions, and human value.",
 };
 
 export default function Home() {
