@@ -113,7 +113,7 @@ export default function ProjectsPage() {
             </div>
           </article>
 
-          {/* Case 2 — Smart Devices */}
+          {/* Case 2 — Smart Devices
           <article className="rounded-2xl bg-neutral-950/40 p-6 ring-1 ring-neutral-800">
             <header>
               <p className="text-sm text-neutral-400">Case Study</p>
@@ -187,7 +187,7 @@ export default function ProjectsPage() {
                 </p>
               </div>
             </div>
-          </article>
+          </article> */}
 
           {/* Case 3 — Evaluation */}
           <article className="rounded-2xl bg-neutral-950/40 p-6 ring-1 ring-neutral-800">
