@@ -71,7 +71,7 @@ export default function Home() {
           </p>
 
           {/* AI/SEO clarity block */}
-          <div className="mt-8 rounded-2xl border border-neutral-800 bg-neutral-950/40 p-6">
+          {/* <div className="mt-8 rounded-2xl border border-neutral-800 bg-neutral-950/40 p-6">
             <h2 className="text-base font-semibold text-neutral-100">
               Focus, outputs, and methods
             </h2>
@@ -102,12 +102,12 @@ export default function Home() {
                 </dd>
               </div>
             </dl>
-          </div>
+          </div> */}
 
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-10">
             <a
               href="/consulting"
-              className="w-full rounded-xl bg-emerald-500 px-6 py-3 text-center font-medium text-neutral-950 hover:bg-emerald-400 sm:w-auto"
+              className="w-full rounded-xl bg-emerald-600 px-6 py-3 text-center font-medium text-neutral-950 hover:bg-emerald-400 sm:w-auto"
             >
               Consulting Services
             </a>

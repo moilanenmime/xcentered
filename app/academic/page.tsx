@@ -9,7 +9,7 @@ export const metadata = {
 export default function AcademicPage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
-      <section className="mx-auto max-w-5xl px-6 py-24">
+      <section className="mx-auto max-w-4xl px-6 py-24">
         <h1 className="text-3xl font-semibold">Academic</h1>
 
         <p className="mt-6 text-neutral-300 leading-relaxed">

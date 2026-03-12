@@ -10,11 +10,11 @@ export default function ConsultingPage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
       <section className="mx-auto max-w-5xl px-6 py-24">
-        <h1 className="text-3xl font-semibold">
+        <h1 className="text-3xl font-semibold max-w-3xl mx-auto">
           Human-Centered Design and Evaluation
         </h1>
 
-        <p className="mt-6 text-neutral-300">
+        <p className="mt-6 text-neutral-300 max-w-3xl mx-auto">
           Alongside my academic research, I offer selected consulting in
           research-based human-centered design and evaluation. I support
           startups, product teams, and digital organizations that want to better
@@ -22,13 +22,13 @@ export default function ConsultingPage() {
           design decisions.
         </p>
 
-        <p className="mt-4 text-neutral-300">
+        <p className="mt-4 text-neutral-300 max-w-3xl mx-auto">
           My work is especially useful when a team needs an external evaluator,
           clearer user understanding, or structured insight into usability,
           stakeholder needs, and product direction.
         </p>
 
-        <p className="mt-4 text-neutral-300">
+        <p className="mt-4 text-neutral-300 max-w-3xl mx-auto">
           As a doctoral researcher in Human–Computer Interaction, I bring a
           research-based and independent perspective to product evaluation and
           human-centered design.
@@ -66,9 +66,11 @@ export default function ConsultingPage() {
           </dl>
         </div> */}
 
-        <h2 className="mt-12 text-xl font-semibold">What I Offer</h2>
+        {/* <h2 className="mt-12 text-xl font-semibold max-w-2xl mx-auto">
+          What I Offer
+        </h2> */}
 
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           <div className="rounded-2xl border border-neutral-800 bg-neutral-950/40 p-6">
             <h3 className="text-lg font-semibold text-neutral-100">
               Research-Based UX / HCD Evaluation
@@ -109,9 +111,11 @@ export default function ConsultingPage() {
           </div>
         </div>
 
-        <h2 className="mt-12 text-xl font-semibold">When I Can Help</h2>
+        <h2 className="mt-12 text-xl font-semibold max-w-3xl mx-auto">
+          When I Can Help
+        </h2>
 
-        <ul className="mt-4 list-disc space-y-4 pl-6 text-neutral-300">
+        <ul className="mt-4 list-disc space-y-4 pl-6 text-neutral-300 max-w-3xl mx-auto">
           <li>
             A startup or product team wants an external, research-based
             evaluation of a digital product, concept, or interface.
@@ -130,27 +134,31 @@ export default function ConsultingPage() {
           </li>
         </ul>
 
-        <h2 className="mt-12 text-xl font-semibold">Deliverables</h2>
+        <h2 className="mt-12 text-xl font-semibold max-w-3xl mx-auto">
+          Deliverables
+        </h2>
 
-        <p className="mt-4 text-neutral-300">
+        <p className="mt-4 text-neutral-300 max-w-3xl mx-auto">
           Depending on the project, deliverables may include a UX design and
           evaluation report, expert review findings, usability test insights,
           workshop recommendations, stakeholder analysis, or more focused
           research-based guidance for product development.
         </p>
 
-        <h2 className="mt-12 text-xl font-semibold">Typical Projects</h2>
+        <h2 className="mt-12 text-xl font-semibold max-w-3xl mx-auto">
+          Typical Projects
+        </h2>
 
-        <p className="mt-4 text-neutral-300">
+        <p className="mt-4 text-neutral-300 max-w-3xl mx-auto">
           Typical projects range from <strong>2000–5000 €</strong>, depending on
           scope, methods, duration, and possible travel. Many collaborations can
           be completed within <strong>2–4 weeks</strong>, while some focused
           evaluations may be delivered faster.
         </p>
 
-        <h2 className="mt-12 text-xl font-semibold">About</h2>
+        <h2 className="mt-12 text-xl font-semibold max-w-3xl mx-auto">About</h2>
 
-        <p className="mt-4 text-neutral-300">
+        <p className="mt-4 text-neutral-300 max-w-3xl mx-auto">
           I am Marko Moilanen, a doctoral researcher in Human–Computer
           Interaction at the University of Oulu. My work combines academic
           research with practical experience in human-centered design, UX and
@@ -161,11 +169,11 @@ export default function ConsultingPage() {
           in digital services and sports technology contexts.
         </p>
 
-        <h2 className="mt-12 text-xl font-semibold">
+        <h2 className="mt-12 text-xl font-semibold max-w-3xl mx-auto">
           How Engagements Usually Work
         </h2>
 
-        <ol className="mt-4 space-y-3 text-neutral-300 list-decimal pl-6">
+        <ol className="mt-4 space-y-3 text-neutral-300 list-decimal pl-6 max-w-3xl mx-auto">
           <li>
             <strong>Initial contact:</strong> You send a short description of
             the case by email.

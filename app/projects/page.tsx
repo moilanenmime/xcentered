@@ -10,16 +10,18 @@ export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
       <section className="mx-auto max-w-5xl px-6 py-24">
-        <h1 className="text-3xl font-semibold">Selected Case Studies</h1>
+        <h1 className="text-3xl font-semibold max-w-4xl mx-auto">
+          Selected Case Studies
+        </h1>
 
-        <p className="mt-6 max-w-3xl leading-relaxed text-neutral-300">
+        <p className="mt-6 leading-relaxed text-neutral-300 max-w-4xl mx-auto">
           A selection of projects showing how I work across human-centered
           design, UX evaluation, research-driven development, and
           ecosystem-level framing. These cases range from commercial platform
           development to broader research and infrastructure initiatives.
         </p>
 
-        <div className="mt-12 grid gap-8">
+        <div className="mt-12 grid gap-8 max-w-4xl mx-auto">
           {/* Case 1 — Powergrip (Flagship) */}
           <article className="rounded-2xl bg-neutral-950/40 p-6 ring-1 ring-neutral-800">
             <header>
@@ -303,7 +305,7 @@ export default function ProjectsPage() {
           </article>
         </div>
 
-        <p className="mt-16 max-w-3xl leading-relaxed text-neutral-300">
+        <p className="mt-16 leading-relaxed text-neutral-300 max-w-3xl mx-auto">
           These projects reflect different layers of my work, from digital
           product evaluation and commercial platform development to broader
           ecosystem framing and research infrastructure building. If your
@@ -312,7 +314,7 @@ export default function ProjectsPage() {
           step.
         </p>
 
-        <div className="mt-8">
+        <div className="mt-8 max-w-3xl mx-auto">
           <a
             href="/consulting"
             className="block rounded-xl border border-neutral-700 px-6 py-3 text-center font-medium hover:bg-neutral-900 sm:inline-block"
