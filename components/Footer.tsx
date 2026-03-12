@@ -27,7 +27,7 @@ export default function Footer() {
               </h3>
 
               <p className="text-sm italic text-emerald-400 leading-snug lg:whitespace-nowrap">
-                Humanity-Centered Systems Architect
+                Human-Centered Design and Evaluation
               </p>
 
               <p className="text-sm text-neutral-500 lg:whitespace-nowrap">

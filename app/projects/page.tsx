@@ -3,7 +3,7 @@
 export const metadata = {
   title: "Projects · Marko Moilanen",
   description:
-    "A selection of work illustrating how complex systems can be clarified, meaning-level frameworks translated into practical design direction, and organizations supported through structured evaluation and advisory.",
+    "Selected case studies in human-centered design, UX evaluation, digital product development, and ecosystem-level research.",
 };
 
 export default function ProjectsPage() {
@@ -12,13 +12,11 @@ export default function ProjectsPage() {
       <section className="mx-auto max-w-5xl px-6 py-24">
         <h1 className="text-3xl font-semibold">Selected Case Studies</h1>
 
-        <p className="mt-6 max-w-3xl text-neutral-300 leading-relaxed">
-          A selection of work illustrating how complex systems can be clarified,
-          meaning-level frameworks translated into practical design direction,
-          and organizations supported through structured evaluation and
-          advisory. The cases reflect different layers of intervention:
-          organizational alignment, research-driven innovation, ecosystem
-          framing, and ethical translation.
+        <p className="mt-6 max-w-3xl leading-relaxed text-neutral-300">
+          A selection of projects showing how I work across human-centered
+          design, UX evaluation, research-driven development, and
+          ecosystem-level framing. These cases range from commercial platform
+          development to broader research and infrastructure initiatives.
         </p>
 
         <div className="mt-12 grid gap-8">
@@ -32,23 +30,22 @@ export default function ProjectsPage() {
               <p className="mt-1 text-neutral-400">Powergrip Web Platform</p>
             </header>
 
-            <div className="mt-5 space-y-5 text-neutral-300 leading-relaxed">
+            <div className="mt-5 space-y-5 leading-relaxed text-neutral-300">
               <div>
                 <p className="font-semibold text-neutral-100">Context</p>
                 <p className="mt-1">
-                  A leading disc golf retailer in Europe operating within a
-                  rapidly evolving sports ecosystem, seeking clearer alignment
-                  between organizational values, platform features, and
-                  community engagement.
+                  A leading disc golf retailer in Europe operating in a rapidly
+                  evolving sports ecosystem, seeking clearer alignment between
+                  organizational values, platform features, and community needs.
                 </p>
               </div>
 
               <div>
                 <p className="font-semibold text-neutral-100">Challenge</p>
                 <p className="mt-1">
-                  Product evolution and feature development required a shared
-                  meaning-level backbone across the company organization,
-                  employees, the web platform, and the disc golf community.
+                  Product development required a clearer shared direction across
+                  the organization, the web platform, and the disc golf
+                  community.
                 </p>
               </div>
 
@@ -64,10 +61,8 @@ export default function ProjectsPage() {
               </div>
 
               <div>
-                <p className="font-semibold text-neutral-100">
-                  Structural Outcomes
-                </p>
-                <ul className="mt-2 list-disc pl-6 space-y-2">
+                <p className="font-semibold text-neutral-100">Outcomes</p>
+                <ul className="mt-2 list-disc space-y-2 pl-6">
                   <li>
                     <span className="font-semibold text-neutral-100">
                       Organizational alignment:
@@ -79,24 +74,22 @@ export default function ProjectsPage() {
                     <span className="font-semibold text-neutral-100">
                       Behavioral segmentation:
                     </span>{" "}
-                    Identified dual user orientation—hedonic users
-                    (discount-driven, quick pleasure) and eudaimonic/ikigai
-                    users (deeper connection and meaning).
+                    Identified different user orientations, including both
+                    quick-pleasure and deeper meaning-driven engagement.
                   </li>
                   <li>
                     <span className="font-semibold text-neutral-100">
                       Feature logic:
                     </span>{" "}
-                    Embedded structured knowledge-sharing (e.g., player data and
-                    reviews) to guide customers toward suitable disc choices.
+                    Embedded knowledge-sharing elements such as player data and
+                    reviews to support better disc selection.
                   </li>
                   <li>
                     <span className="font-semibold text-neutral-100">
                       Evaluation innovation:
                     </span>{" "}
-                    Introduced post-release monitoring as a feedback loop,
-                    including social media channel monitoring after major
-                    releases.
+                    Introduced post-release monitoring and social media feedback
+                    loops after major releases.
                   </li>
                 </ul>
               </div>
@@ -104,107 +97,31 @@ export default function ProjectsPage() {
               <div>
                 <p className="font-semibold text-neutral-100">Impact</p>
                 <p className="mt-1">
-                  Shifted the platform’s long-term design backbone from a
-                  primarily transactional webshop toward a knowledge-driven
-                  ecosystem actor, supporting better disc selection and
-                  community value.
+                  Helped shift the platform’s long-term direction from a
+                  primarily transactional webshop toward a more knowledge-driven
+                  ecosystem actor serving both customers and the disc golf
+                  community.
                 </p>
               </div>
             </div>
           </article>
 
-          {/* Case 2 — Smart Devices
+          {/* Case 2 — Evaluation */}
           <article className="rounded-2xl bg-neutral-950/40 p-6 ring-1 ring-neutral-800">
             <header>
               <p className="text-sm text-neutral-400">Case Study</p>
               <h2 className="mt-1 text-xl font-semibold">
-                Research-Driven Framing of Smart Sports Devices
-              </h2>
-              <p className="mt-1 text-neutral-400">
-                Disc Golf SmartMarker & Data Systems
-              </p>
-            </header>
-
-            <div className="mt-5 space-y-5 text-neutral-300 leading-relaxed">
-              <div>
-                <p className="font-semibold text-neutral-100">Context</p>
-                <p className="mt-1">
-                  Exploration of smart disc golf devices integrating sensor
-                  data, player feedback, and training environments.
-                </p>
-              </div>
-
-              <div>
-                <p className="font-semibold text-neutral-100">Challenge</p>
-                <p className="mt-1">
-                  How to translate system-level thinking (DIKW pyramid) into
-                  actionable device logic that supports player learning and
-                  meaningful performance feedback.
-                </p>
-              </div>
-
-              <div>
-                <p className="font-semibold text-neutral-100">Intervention</p>
-                <ul className="mt-2 list-disc pl-6 space-y-2">
-                  <li>
-                    Conceptualized SmartMarker as a DIKW-informed device
-                    framework.
-                  </li>
-                  <li>
-                    Visualized and structured feature logic for implementation.
-                  </li>
-                  <li>
-                    Acted as client to a university student development team.
-                  </li>
-                  <li>
-                    Guided prototype implementation and real-world
-                    demonstration.
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <p className="font-semibold text-neutral-100">
-                  Institutional Validation
-                </p>
-                <p className="mt-1">
-                  Presented to the Innovation Center at the University of Oulu.
-                  Patent potential was identified; a strategic decision was made
-                  to continue as open research to enable future academic
-                  publication and collaborative development.
-                </p>
-              </div>
-
-              <div>
-                <p className="font-semibold text-neutral-100">
-                  Extended Research Layer
-                </p>
-                <p className="mt-1">
-                  Ongoing collection of player performance data in simulator
-                  environments, aiming to publish reference datasets for players
-                  and coaches (e.g., “ideal value ranges” for specific throwing
-                  distances).
-                </p>
-              </div>
-            </div>
-          </article> */}
-
-          {/* Case 3 — Evaluation */}
-          <article className="rounded-2xl bg-neutral-950/40 p-6 ring-1 ring-neutral-800">
-            <header>
-              <p className="text-sm text-neutral-400">Case Study</p>
-              <h2 className="mt-1 text-xl font-semibold">
-                Evaluation as System Intelligence in HCI & IS
+                Research-Based Evaluation in HCI and Digital Product Development
               </h2>
             </header>
 
-            <div className="mt-5 space-y-5 text-neutral-300 leading-relaxed">
+            <div className="mt-5 space-y-5 leading-relaxed text-neutral-300">
               <div>
                 <p className="font-semibold text-neutral-100">Context</p>
                 <p className="mt-1">
                   Multiple usability and UX evaluation engagements across
-                  research and commercial environments, including acting both as
-                  responsible researcher and as client coordinating external
+                  research and commercial environments, including roles as both
+                  responsible researcher and client coordinating external
                   evaluation teams.
                 </p>
               </div>
@@ -212,58 +129,114 @@ export default function ProjectsPage() {
               <div>
                 <p className="font-semibold text-neutral-100">Challenge</p>
                 <p className="mt-1">
-                  Evaluation is often treated as a late-stage checklist activity
-                  rather than as a structured, ongoing function guiding system
-                  evolution.
+                  Evaluation is often treated as a late-stage checklist rather
+                  than as an ongoing function guiding product evolution and
+                  decision-making.
                 </p>
               </div>
 
               <div>
                 <p className="font-semibold text-neutral-100">Intervention</p>
-                <ul className="mt-2 list-disc pl-6 space-y-2">
+                <ul className="mt-2 list-disc space-y-2 pl-6">
                   <li>
                     Led usability and UX evaluation projects for real case
                     companies.
                   </li>
                   <li>
-                    Conducted extensive user testing sessions and heuristic
-                    evaluations.
+                    Conducted user testing sessions and heuristic evaluations.
                   </li>
                   <li>
-                    Acted as client coordinating multi-cycle external UX
-                    assessments.
+                    Coordinated multi-cycle external UX assessments as a client.
                   </li>
                   <li>
-                    Developed structured evaluation processes integrated into
-                    development workflows.
+                    Integrated structured evaluation processes into development
+                    workflows.
                   </li>
                   <li>
-                    Introduced post-release monitoring and expanded feedback
-                    channels.
+                    Expanded post-release monitoring and feedback channels.
                   </li>
                 </ul>
               </div>
 
               <div>
                 <p className="font-semibold text-neutral-100">
-                  Meaning-Level Evaluation
+                  Extended Evaluation Lens
                 </p>
                 <p className="mt-1">
-                  Building on the HCI-Ikigai framework, evaluation extends
-                  beyond usability toward assessing alignment between system
-                  behavior, stakeholder values, and long-term purpose. This
-                  includes identifying value tensions, motivational differences,
-                  and ecosystem-level consequences.
+                  Building on the HCI-Ikigai framework, evaluation can extend
+                  beyond usability toward stakeholder values, motivational
+                  differences, and longer-term system implications.
                 </p>
               </div>
 
               <div>
                 <p className="font-semibold text-neutral-100">Impact</p>
                 <p className="mt-1">
-                  Strengthened decision-making through structured feedback
-                  loops, clearer problem identification, and alignment between
-                  user experience, organizational intent, and system-level
-                  direction.
+                  Strengthened decision-making through clearer problem
+                  identification, structured feedback loops, and better
+                  alignment between user experience, organizational intent, and
+                  product direction.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          {/* Case 3 — SportsHCI Lab */}
+          <article className="rounded-2xl bg-neutral-950/40 p-6 ring-1 ring-neutral-800">
+            <header>
+              <p className="text-sm text-neutral-400">Ongoing Initiative</p>
+              <h2 className="mt-1 text-xl font-semibold">
+                Building a SportsHCI Lab Pilot Environment
+              </h2>
+              <p className="mt-1 text-neutral-400">University of Oulu</p>
+            </header>
+
+            <div className="mt-5 space-y-5 leading-relaxed text-neutral-300">
+              <div>
+                <p className="font-semibold text-neutral-100">Context</p>
+                <p className="mt-1">
+                  A pilot initiative to create a dedicated SportsHCI research
+                  and experimentation environment at the University of Oulu,
+                  with an initial focus on disc golf and sports technology.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-neutral-100">Challenge</p>
+                <p className="mt-1">
+                  Sports technology research often lacks a concrete physical
+                  environment where digital systems, athlete experience, data
+                  collection, and stakeholder collaboration can be brought
+                  together in practice.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-neutral-100">Current Work</p>
+                <ul className="mt-2 list-disc space-y-2 pl-6">
+                  <li>
+                    Developing the lab concept, identity, and practical use
+                    cases.
+                  </li>
+                  <li>
+                    Planning infrastructure for pilot research, testing, and
+                    stakeholder collaboration.
+                  </li>
+                  <li>
+                    Framing the space as a bridge between academic research,
+                    sports technology development, and real-world field
+                    contexts.
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p className="font-semibold text-neutral-100">Relevance</p>
+                <p className="mt-1">
+                  The initiative reflects my broader approach: not only
+                  evaluating systems, but also building the environments,
+                  structures, and collaborations needed for meaningful long-term
+                  development.
                 </p>
               </div>
             </div>
@@ -278,30 +251,29 @@ export default function ProjectsPage() {
               </h2>
             </header>
 
-            <div className="mt-5 space-y-5 text-neutral-300 leading-relaxed">
+            <div className="mt-5 space-y-5 leading-relaxed text-neutral-300">
               <div>
                 <p className="font-semibold text-neutral-100">Context</p>
                 <p className="mt-1">
-                  Complex digital transformation environments where stakeholder
-                  ecosystems, long-term societal implications, and ethical
-                  alignment must be considered simultaneously.
+                  Complex digital transformation environments where multiple
+                  stakeholders, long-term societal implications, and ethical
+                  alignment must be considered together.
                 </p>
               </div>
 
               <div>
                 <p className="font-semibold text-neutral-100">Intervention</p>
-                <ul className="mt-2 list-disc pl-6 space-y-2">
+                <ul className="mt-2 list-disc space-y-2 pl-6">
                   <li>
-                    Mapped stakeholder systems using micro–meso–macro (MMM)
-                    analysis.
+                    Mapped stakeholder systems using micro–meso–macro analysis.
                   </li>
                   <li>Identified value tensions across ecosystem actors.</li>
                   <li>
-                    Integrated DIKW-level framing to clarify data, information,
-                    knowledge, and wisdom layers.
+                    Used DIKW framing to clarify data, information, knowledge,
+                    and wisdom layers.
                   </li>
                   <li>
-                    Developed Humanity-Centered Design principles for long-term
+                    Developed humanity-centered design principles for long-term
                     system alignment.
                   </li>
                 </ul>
@@ -314,8 +286,8 @@ export default function ProjectsPage() {
                 <p className="mt-1">
                   Applied humanity-centered thinking to AI ethics through the AI
                   Conscience initiative, exploring how ethical guidance and
-                  meaning-centered principles can be operationalized within AI
-                  system design.
+                  meaning-centered principles can be translated into AI system
+                  design.
                 </p>
               </div>
 
@@ -324,28 +296,28 @@ export default function ProjectsPage() {
                 <p className="mt-1">
                   Focused on ecosystem-level challenges involving multiple
                   stakeholders, long-term consequences, and systemic complexity
-                  rather than isolated feature-level design.
+                  rather than isolated interface-level design alone.
                 </p>
               </div>
             </div>
           </article>
-
-          {/* Add other cases below... */}
         </div>
 
-        <p className="mt-16 max-w-3xl text-neutral-300 leading-relaxed">
-          These cases reflect different layers of intervention - from commercial
-          platform transformation to ecosystem-level ethical design. If you are
-          navigating a similarly complex initiative, structured advisory
-          collaboration may be valuable.
+        <p className="mt-16 max-w-3xl leading-relaxed text-neutral-300">
+          These projects reflect different layers of my work, from digital
+          product evaluation and commercial platform development to broader
+          ecosystem framing and research infrastructure building. If your
+          organization is working through a similarly complex design or
+          evaluation challenge, consulting collaboration may be a useful next
+          step.
         </p>
 
         <div className="mt-8">
           <a
             href="/consulting"
-            className="block sm:inline-block text-center rounded-xl border border-neutral-700 px-6 py-3 font-medium hover:bg-neutral-900"
+            className="block rounded-xl border border-neutral-700 px-6 py-3 text-center font-medium hover:bg-neutral-900 sm:inline-block"
           >
-            Explore advisory collaboration
+            Explore consulting
           </a>
         </div>
       </section>

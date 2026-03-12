@@ -1,135 +1,211 @@
 // app/consulting/page.tsx
 
 export const metadata = {
-  title: "Advisory & Consulting · Marko Moilanen",
+  title: "Consulting · Marko Moilanen",
   description:
-    "Selected advisory collaborations for humanity-centered digital initiatives - when stakeholder complexity, human value, and long-term sustainability require conceptual clarity and structured evaluation.",
+    "Research-based human-centered design and evaluation for digital products and services. Typical projects include UX evaluation reports, expert reviews, workshops, and practical recommendations.",
 };
 
 export default function ConsultingPage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
       <section className="mx-auto max-w-5xl px-6 py-24">
-        <h1 className="text-3xl font-semibold">Advisory & Consulting</h1>
+        <h1 className="text-3xl font-semibold">
+          Human-Centered Design and Evaluation
+        </h1>
 
         <p className="mt-6 text-neutral-300">
-          Alongside my academic research, I engage in selected advisory
-          collaborations where digital initiatives require conceptual clarity,
-          structured evaluation, or humanity-centered direction. By
-          humanity-centered, I mean designing and evaluating systems so that
-          human dignity, real stakeholder needs, and long-term societal
-          consequences are not treated as afterthoughts.
+          Alongside my academic research, I offer selected consulting in
+          research-based human-centered design and evaluation. I support
+          startups, product teams, and digital organizations that want to better
+          understand users, evaluate digital products, and make more informed
+          design decisions.
         </p>
 
         <p className="mt-4 text-neutral-300">
-          My work focuses on situations where technological development,
-          stakeholder complexity, and human value intersect — and where the path
-          forward is not yet clearly articulated.
+          My work is especially useful when a team needs an external evaluator,
+          clearer user understanding, or structured insight into usability,
+          stakeholder needs, and product direction.
         </p>
 
-        <h2 className="mt-12 text-xl font-semibold">
-          When I Typically Get Involved
-        </h2>
+        <p className="mt-4 text-neutral-300">
+          As a doctoral researcher in Human–Computer Interaction, I bring a
+          research-based and independent perspective to product evaluation and
+          human-centered design.
+        </p>
 
-        <ul className="mt-4 list-disc pl-6 text-neutral-300 space-y-4">
-          <li>
-            <strong>Strategic System Clarification:</strong> When a project,
-            platform, or transformation initiative feels conceptually
-            unclear—and needs structured mapping of stakeholders, values, system
-            boundaries, and decision trade-offs.
-          </li>
-
-          <li>
-            <strong>Humanity-Centered Evaluation:</strong> When an existing
-            digital system needs more than usability checking, such as
-            assessment of value tensions, ethical risks, meaning, and long-term
-            sustainability implications.
-          </li>
-
-          <li>
-            <strong>Research-Informed Direction:</strong> When exploring new
-            products, services, or frameworks that require conceptual modeling,
-            rigorous evaluation logic, and alignment with humanity-centered
-            principles.
-          </li>
-        </ul>
-
-        <div className="mt-8 rounded-2xl border border-neutral-800 bg-neutral-950/40 p-6">
+        {/* <div className="mt-8 rounded-2xl border border-neutral-800 bg-neutral-950/40 p-6">
           <h2 className="text-base font-semibold text-neutral-100">
-            Typical focus areas
+            About my consulting
           </h2>
 
           <dl className="mt-4 grid gap-4 text-sm sm:grid-cols-3">
             <div>
-              <dt className="text-neutral-400">Domains</dt>
+              <dt className="text-neutral-400">Focus</dt>
               <dd className="mt-1 text-neutral-200">
-                HCI/UX, digital transformation, sports technology, digital
-                platforms
+                Human–Computer Interaction (HCI), human-centered design, UX and
+                usability evaluation, stakeholder understanding
               </dd>
             </div>
+
             <div>
-              <dt className="text-neutral-400">Core lens</dt>
+              <dt className="text-neutral-400">Typical outputs</dt>
               <dd className="mt-1 text-neutral-200">
-                Human value, stakeholder tensions, ethics, sustainability
+                Evaluation reports, expert reviews, usability findings, workshop
+                recommendations, and research-informed design direction
               </dd>
             </div>
+
             <div>
-              <dt className="text-neutral-400">Formats</dt>
+              <dt className="text-neutral-400">Collaboration</dt>
               <dd className="mt-1 text-neutral-200">
-                Workshops, evaluations, advisory sprints, research–industry
-                collaboration
+                Remote internationally or on-site by agreement, depending on the
+                project and scope
               </dd>
             </div>
           </dl>
+        </div> */}
+
+        <h2 className="mt-12 text-xl font-semibold">What I Offer</h2>
+
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
+          <div className="rounded-2xl border border-neutral-800 bg-neutral-950/40 p-6">
+            <h3 className="text-lg font-semibold text-neutral-100">
+              Research-Based UX / HCD Evaluation
+            </h3>
+
+            <p className="mt-3 text-neutral-300">
+              I evaluate digital products, concepts, and interfaces through a
+              research-based human-centered lens. Depending on the case, this
+              may include UX expert review, heuristic evaluation, usability
+              testing, stakeholder analysis, user surveys, or other suitable
+              evaluation methods.
+            </p>
+
+            <p className="mt-4 text-neutral-300">
+              Typical outcomes include a clear view of usability issues, user
+              and stakeholder needs, and practical recommendations for product
+              development.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-neutral-800 bg-neutral-950/40 p-6">
+            <h3 className="text-lg font-semibold text-neutral-100">
+              Human-Centered Design Workshops
+            </h3>
+
+            <p className="mt-3 text-neutral-300">
+              I facilitate workshops that help teams clarify users,
+              stakeholders, design challenges, and development direction.
+              Workshops can support product planning, concept development,
+              evaluation preparation, or broader human-centered design work.
+            </p>
+
+            <p className="mt-4 text-neutral-300">
+              Depending on the case, workshops may include stakeholder mapping,
+              scenario work, user-centered framing, and structured discussion
+              around design priorities and risks.
+            </p>
+          </div>
         </div>
 
+        <h2 className="mt-12 text-xl font-semibold">When I Can Help</h2>
+
+        <ul className="mt-4 list-disc space-y-4 pl-6 text-neutral-300">
+          <li>
+            A startup or product team wants an external, research-based
+            evaluation of a digital product, concept, or interface.
+          </li>
+          <li>
+            An organization needs clearer understanding of users, stakeholders,
+            and usability issues before making product decisions.
+          </li>
+          <li>
+            A team wants to reduce design risk early by bringing human-centered
+            evaluation into development.
+          </li>
+          <li>
+            A company or IT partner needs an outside consultant for UX,
+            usability, or human-centered design evaluation.
+          </li>
+        </ul>
+
+        <h2 className="mt-12 text-xl font-semibold">Deliverables</h2>
+
+        <p className="mt-4 text-neutral-300">
+          Depending on the project, deliverables may include a UX design and
+          evaluation report, expert review findings, usability test insights,
+          workshop recommendations, stakeholder analysis, or more focused
+          research-based guidance for product development.
+        </p>
+
+        <h2 className="mt-12 text-xl font-semibold">Typical Projects</h2>
+
+        <p className="mt-4 text-neutral-300">
+          Typical projects range from <strong>2000–5000 €</strong>, depending on
+          scope, methods, duration, and possible travel. Many collaborations can
+          be completed within <strong>2–4 weeks</strong>, while some focused
+          evaluations may be delivered faster.
+        </p>
+
+        <h2 className="mt-12 text-xl font-semibold">About</h2>
+
+        <p className="mt-4 text-neutral-300">
+          I am Marko Moilanen, a doctoral researcher in Human–Computer
+          Interaction at the University of Oulu. My work combines academic
+          research with practical experience in human-centered design, UX and
+          usability evaluation, and stakeholder analysis. Alongside my research,
+          I collaborate with digital product teams to provide research-based
+          insight, structured evaluation, and practical recommendations for
+          product development. I also bring experience from real-world projects
+          in digital services and sports technology contexts.
+        </p>
+
         <h2 className="mt-12 text-xl font-semibold">
-          What an Engagement May Produce
+          How Engagements Usually Work
         </h2>
 
-        <p className="mt-4 text-neutral-300">
-          Depending on the case, an engagement may produce stakeholder maps,
-          system and value-tension models, evaluation plans and findings,
-          reframed design directions, or research-informed strategic
-          recommendations.
-        </p>
-
-        <h2 className="mt-12 text-xl font-semibold">Engagement Model</h2>
-
-        <p className="mt-4 text-neutral-300">
-          Engagements may range from focused workshops and short evaluations to
-          longer advisory collaborations. I work selectively and in alignment
-          with my doctoral research schedule, typically supporting initiatives
-          where meaningful impact and intellectual rigor are both valued.
-        </p>
-
-        <p className="mt-4 text-neutral-300">
-          Recent collaborations have included work in sports technology, digital
-          platforms, and research–industry partnerships.
-        </p>
+        <ol className="mt-4 space-y-3 text-neutral-300 list-decimal pl-6">
+          <li>
+            <strong>Initial contact:</strong> You send a short description of
+            the case by email.
+          </li>
+          <li>
+            <strong>Short discussion:</strong> We clarify the situation in a
+            brief Teams call and define the most useful evaluation approach.
+          </li>
+          <li>
+            <strong>Proposal:</strong> I send a short proposal describing the
+            scope, methods, timeline, and price.
+          </li>
+          <li>
+            <strong>Evaluation & recommendations:</strong> The work results in a
+            structured evaluation report or workshop outcomes that support
+            product decisions.
+          </li>
+        </ol>
 
         {/* Start a Conversation */}
-        <div className="mt-14 mx-auto max-w-3xl rounded-2xl bg-neutral-950/40 ring-1 ring-neutral-800 p-5 sm:p-8">
+        <div className="mx-auto mt-14 max-w-3xl rounded-2xl bg-neutral-950/40 p-5 ring-1 ring-neutral-800 sm:p-8">
           <h2 className="text-xl font-semibold">Start a Conversation</h2>
 
-          <p className="mt-4 text-neutral-300 leading-relaxed">
-            I work selectively, typically supporting initiatives where
-            meaningful impact and intellectual rigor are both valued.
-            Engagements range from focused workshops and short evaluations to
-            longer advisory collaborations.
+          <p className="mt-4 leading-relaxed text-neutral-300">
+            If your case is reasonably clear, you can send me an email directly.
+            We can then agree on a Teams discussion or move forward with a
+            focused proposal, depending on the situation.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-start">
             <a
               href="mailto:marko.i.moilanen@oulu.fi"
-              className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl border border-neutral-700 px-6 py-3 font-medium hover:bg-neutral-900"
+              className="inline-flex w-full items-center justify-center rounded-xl border border-neutral-700 px-6 py-3 font-medium hover:bg-neutral-900 sm:w-auto"
             >
-              Send an introduction
+              Send an email
             </a>
 
             <a
               href="/projects"
-              className="text-sm text-neutral-400 hover:text-neutral-200 underline-offset-4 hover:underline"
+              className="text-sm text-neutral-400 underline-offset-4 hover:text-neutral-200 hover:underline"
             >
               View selected work
             </a>
