@@ -29,9 +29,9 @@ export default function ConsultingPage() {
         </p>
 
         <p className="mt-4 text-neutral-300 max-w-3xl mx-auto">
-          As a doctoral researcher in Human–Computer Interaction, I bring a
-          research-based and independent perspective to product evaluation and
-          human-centered design.
+          As a doctoral researcher in Human–Computer Interaction, I provide a
+          research-based and independent perspective on the evaluation of
+          digital products and human-centered design.
         </p>
 
         {/* <div className="mt-8 rounded-2xl border border-neutral-800 bg-neutral-950/40 p-6">
@@ -198,9 +198,11 @@ export default function ConsultingPage() {
           <h2 className="text-xl font-semibold">Start a Conversation</h2>
 
           <p className="mt-4 leading-relaxed text-neutral-300">
-            If your case is reasonably clear, you can send me an email directly.
-            We can then agree on a Teams discussion or move forward with a
-            focused proposal, depending on the situation.
+            Most collaborations start with a short conversation about the case.
+            If you have a product, concept, or evaluation challenge in mind,
+            feel free to send a brief description by email. We can then arrange
+            a short Teams discussion or move forward with a focused proposal if
+            the situation is already clear.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-start">
